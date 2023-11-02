@@ -9,18 +9,45 @@
 <body>
 
     <table border="1">
+        <tr height="100">
+            <td width="300" colspan="3">너비: 300, 높이: 100</td>
+            
+            
+            <td width="50">너비: 50,<br> 높이: 100</td>
+        </tr>
+        <tr height="100">
+            <td>높이: 100</td>
+            <td colspan="2">높이: 100</td>
+            
+            <td height="200" rowspan="2">너비: 50,<br> 높이: 200</td>
+        </tr>
+        <tr height="100">
+            <td>높이: 100</td>
+            <td>높이: 100</td>
+            <td>높이: 100</td>
+            
+        </tr>
+    </table>
+
+    <br><br>
+    <!--
+        합칠때엔 뒤에있는걸 없애기
+        colspan 가로줄 합치기
+        rowspan 세로줄 합치기
+    -->
+    <table border="1">
         <tr height="50">
-            <td width="50"></td>
-            <td width="50"></td>
-            <td width="50"></td>
+            <td width="152" colspan="3"></td>
+            
+            
         </tr>
         <tr height="50">
+            <td rowspan="2"></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td ></td>
         </tr>
         <tr height="50">
-            <td></td>
+            
             <td></td>
             <td></td>
         </tr>
