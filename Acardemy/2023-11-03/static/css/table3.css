@@ -1,0 +1,42 @@
+/* table3.css */
+/*
+    이름표기법
+    카멜표기법 : ex) myPageInfo / 첫번째문자 빼고 각 단어의 시작알파벳을 대문자 (주로사용)
+    스네이크표기법 : ex)my_page_info / 각 단어 사이에 언더바
+    파스칼표기법 : ex) MyPageInfo / 첫번째문자부터 각 단어의 시작알파벳을 대문자
+    헝가리안표기법 : ex)class_numTd / 어디에 사용되는 파일인지 이름을 정한다.
+*/
+
+.box{
+    border-collapse: collapse; /*td간격제거*/    
+}
+.box tr th{
+    border-bottom:3px solid #aaa;
+}
+.num{
+    width:50px;
+    height:40px;
+}
+.name{
+    width:150px;
+}
+.score{
+    width:50px;
+}
+.rank{
+    width:40px;
+}
+
+.box tr td {
+    text-align:center;
+    height:30px;
+    border-bottom: 1px solid #bbb;
+}
+.nameTd{
+    font-weight: 800;
+}
+/*hover 마우스커서가 올라왔을때 화면이 바뀜*/
+.nameTd:hover{
+    background-color: cadetblue;
+    color:#fff;
+}
