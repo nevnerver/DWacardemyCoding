@@ -1,0 +1,53 @@
+#whole{
+    border-collapse: collapse;
+}
+
+#firstLine{
+    border:1px solid black;
+    width: 1100px;
+    text-align: right;
+}
+
+.noticeName{
+    width: 80px;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+}
+
+#secondLine{
+    border: 1px solid black;
+    height: 50px;
+}
+
+#list{
+    width: 200px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+#image{
+    border: 1px solid black;
+}
+.mainImage{
+    width:950px;
+    height:500px;
+}
+.menuName{
+    text-align: center;
+}
+.menuItem{
+    padding-left: 40px;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.listMain{
+    font-size: 21px;
+    font-weight: 800;
+}
+.listMenu{
+    padding-left: 20px;
+    font-weight: 800;
+    font-size: 13px;
+}

@@ -7,9 +7,9 @@ body{
     border-collapse:collapse;
     margin: 20px auto;
 }
-#wrap tr td{
-    /* border:1px solid #1a1a1a; */
-}
+/* #wrap tr td{
+    border:1px solid #1a1a1a; 
+} */
 
 #header{
     border-radius: 10px;

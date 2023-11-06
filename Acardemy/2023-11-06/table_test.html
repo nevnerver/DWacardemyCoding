@@ -1,0 +1,64 @@
+<!--table_test.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블실습final</title>
+    <link rel="stylesheet" href="./static/css/table.css">
+</head>
+<body>
+    <table id="whole">
+        <tr id="firstLine">
+            <td colspan="2"></td>
+            <td id="notice">
+                <table>
+                    <tr>
+                        <td class="noticeName">로그인</td>
+                        <td class="noticeName">회원가입</td>
+                        <td class="noticeName">고객센터</td>
+                    </tr>
+                </table>
+            </td>
+            
+        </tr>
+        <tr id="secondLine">
+            <td></td>
+            <td id="menu">
+                <table class="menuName">
+                    <tr>
+                        <td class="menuItem">콘테스트</td>
+                        <td class="menuItem">같이하기</td>
+                        <td class="menuItem">대회일정</td>
+                        <td class="menuItem">자유게시판</td>
+                        <td class="menuItem">공지사항</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td id="list">
+                <table>
+                    <tr>
+                        <td class="listMain">대회일정</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="listMenu">
+                                <li>UI(11월 20일)</li>
+                                <li>데이터시각화(11월 28일)</li>
+                                <li>앱 콘테스트(12월 2일)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="image" colspan="2">
+                <img class="mainImage" src="./static/images/Landscape-Color.jpg" alt="메인페이지">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

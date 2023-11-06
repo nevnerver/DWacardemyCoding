@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+#wrap{
+    border-collapse: collapse;
+    width: 1000px;
+}
+#wrap tr td{
+    border: 1px solid black;
+}
+#top{
+    width: 100%;
+}
+#top table{
+    float:right;
+}
+
+#header table{
+    width:600px;
+    margin:0 auto;
+/*
+    태그의 위치를 해당 공간에서 가운데 위치하려면
+    margin을 이용하여 왼쪽 오른쪽 여백을 똑같이 설정되도록 auto를 준다.
+    magin: 0 auto;는 margin: 위아래여백 좌우여백;
+    만 설정한다고 해서 가운데로 위치하지 않는다.
+    꼭 width길이를 설정해줘야 함.
+*/
+}
+#header table tr td{
+    border: 0;
+}
+#side{
+    width:300px;
+    height:400px;
+}
+#mainImg{
+    width:700px;
+}
