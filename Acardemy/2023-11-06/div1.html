@@ -15,6 +15,40 @@
             padding:20px 100px;
             margin-top:100px;
         }
+        #box2{
+            width: 200px;
+            height: 100px;
+            background: mediumorchid;
+            margin-left: 200px;
+            margin-top: -220px;
+        }
+        #box3{
+            box-sizing: border-box; /* box값을 border값으로 맞추면 border나 padding을 줘도 바깥쪽 크기가 안변함*/
+            width: 500px;
+            /* height: 400px; */
+            background: tomato;
+            padding: 150px 175px;
+        }
+        #box4{
+            width: 150px;
+            height: 100px;
+            background: papayawhip;
+        }
+        #box5{
+            box-sizing: border-box;
+            width: 600px;
+            /* height: 50px; */
+            background:yellow;
+            text-align: center;
+            padding: 20px;
+        }
+        #box6{
+            box-sizing: border-box;
+            width:500px;
+            background: hotpink;
+            text-align: right;  
+            padding-right: 10px;    
+        }
     </style>
 
 </head>
@@ -23,12 +57,38 @@
     <div id="box1">
 
     </div>
+    <div id="box2">
 
+    </div>
+    <div id="box3">
+        <div id="box4">
+
+        </div>
+    </div>
+    <br><br>
+    <div id="box5">
+        입양 가능! 새로운 가족을 기다리고 있어요
+    </div>
+    <div id="box6">
+        반려동물 사랑으로 입양하세요
+    </div>
 
     <!--
         태그에 적용할 수 있는 여백
         안쪽 여백 - padding
         바깥쪽 여백 - margin
+
+        padding은 안쪽여백을 생성한다.
+        padding으로 생성된 공간은 내부에서 사용불가이다.(텍스트, 이미지 등등)
+        div 영역 안에 특정 태그의 위치를 이동시키고 다른 공간에 텍스트나 이미지를 표현하고자 한다면, padding이 아니라 margin을 써야한다.
+        
+        padding은 안쪽에 사용 할수 없는 공간을 생성하는 것이다.
+        margin은 기본적으로 사용할 수 없는 바깥쪽 공간을 생성하는 것이기 때문에
+        div 영역 내부에 표시되는 내용에는 영향을 주지 않는다.
+
+        하여 영역 안쪽의 태그들의 위치를 설정 하기 위해서는 padding을
+        영역의 화면에서 위치를 설정하기 위해서 margin을 이용한다.
+
 
 
         div - division
