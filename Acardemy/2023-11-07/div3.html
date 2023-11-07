@@ -1,0 +1,87 @@
+<!--div3.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box1{
+            width: 500px;
+            height: 500px;
+            background: pink;
+            margin-top: 100px;
+            position: relative;
+        }
+        #child1{
+            width: 100px;
+            height: 150px;
+            background: green;
+            position: absolute;
+            left:150px;
+            top:30px;
+        }
+        #child2{
+            width: 100px;
+            height: 50px;
+            background: brown;
+            position: relative;
+            top: 100px;
+            right: 50px;
+        }
+        #topButton{
+            position:fixed;
+            right:100px;
+            top:200px;
+        }
+        #menu{
+            position:sticky;
+            top:100px;
+            z-index: 100;
+        }
+    </style>
+
+
+</head>
+
+
+    <!-- 
+        css - position 
+        position : 위치 , 페이지에서 해당 태그를 배치하는 방법
+        position 값 
+        -position: static; 기본적으로 태그가 가지고 있는 값
+
+        -position: relative; 
+            자신이 처음 생성된 위치를 기준으로 top, right, left, bottom 방향으로 이동이 가능하고,
+            기준점에서 어디든 이동은 가능하다.
+            하지만 relative일때 기준점을 중심으로 이동이 되기때문에
+            right, bottom 사용시 주의 해야한다.
+
+        -position: absolute; 상위태그(부모,조상태그)를 기준으로이동
+            상위태그에 relative가 없다면 body태그에서 시작하기때문에 relative;를 적용시켜야함
+            이럴때 right 적용시 상위태그의 오른쪽 기준에서 이동함. 
+
+        -position: fixed; absoulte처럼 순서에서 제거되고,
+                          absoulte와는 다르게 상위(부모,조상)태그에 귀속되지 않는다.
+
+        -position: sticky; 태그의 기본 순서는 유지를 하면서 
+                           스크롤 동작시에는 가장 가까운 상위 태그에 귀속된다.
+                           스크롤이 sticky 태그에 위치해 있으면 일반적인 태그의 모습으로 나타나지만
+                           스크롤이 sticky 태그위치와 달라지면 fixed처럼 화면에 고정된다.
+    -->
+
+<body>
+
+    <div id="menu">홈 지상최대공모전 시리즈에디션</div>
+    <div id="box1">
+        <div id="child1"></div>
+        <div id="child2"></div>
+        <div id="topButton">top</div>
+    </div>
+
+    <div style="height:800px"></div>
+
+
+</body>
+</html>
