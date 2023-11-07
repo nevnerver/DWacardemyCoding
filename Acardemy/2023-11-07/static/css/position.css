@@ -55,3 +55,62 @@ ex) .nav .menu:nth-child()
 
 nth-child() 가상선택자
 */
+
+#main{
+    position:relative;
+    width: 100%;
+}
+.imgBox{
+    position:relative;
+    width: 300px;
+    height: 200px;
+    margin-top: 15px;
+}
+#main .imgBox:nth-child(4){
+    top: -645px;
+    left: 315px;
+    height: 0;
+}
+#main .imgBox:nth-child(5){
+    top: -230px;
+    left: 315px;
+    height: 0;
+}
+#main .imgBox:nth-child(6){
+    top: -245px;
+    left: calc( 315px * 2 );
+    height: 0;
+}
+
+/* #main{
+    position: relative;
+    width: 100%;
+}
+.imgBox{
+    height:200px;
+}
+.imgBox:nth-child(2){
+    position: absolute;
+    left: 310px;
+    top: 0;
+}
+.imgBox:nth-child(3){
+    padding: 10px 0;
+}
+.imgBox:nth-child(5){
+    position: absolute;
+    top: 420px;
+    left: 310px;
+}
+.imgBox:nth-child(6){
+    position: absolute;
+    top: 420px;
+    left: 620px;
+} */
+
+#foot{
+    width: 100%;
+    padding: 50px;
+    background: darkslategrey;
+    color: #dddddd;
+}
