@@ -1,0 +1,108 @@
+body{
+    margin:0;
+}
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+#header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgb(206, 250, 140);
+}
+.logoWrap{
+    height:100px;
+}
+.logoImg{
+    width: 70px;
+    height: 100px;
+}
+.menuWrap{
+    position: absolute;
+    top:0;
+    left:350px;
+    margin-left: 50px;
+}
+.nav{
+    line-height: 100px;
+}
+.menu{
+    width: 100px;
+    position: absolute;
+    text-align: center;
+}
+.menu:nth-child(2){
+    left:100px;
+}
+.menu:nth-child(3){
+    left:200px;
+}
+.menu:nth-child(4){
+    left:300px;
+}
+.menu:nth-child(5){
+    left:400px;
+}
+.menu:nth-child(6){
+    left:500px;
+}
+#main{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative; 
+    background: rgb(204, 203, 255);
+    padding: 100px;
+}
+#main ul{
+    margin: 0;
+}
+.mainMenu{
+    width: 200px;
+    height: 300px;
+}
+.digital{
+    position: absolute;
+    left: 425px;
+    top: 100px;
+}
+.cosmetic{
+    position: absolute;
+    left: 700px;
+    top: 100px;
+}
+.sports{
+    position: absolute;
+    left: 425px;
+    top: 400px;
+}
+.furniture{
+    position: absolute;
+    left: 700px;
+    top: 400px;
+}
+#foot{
+    background: rgb(224, 64, 64);
+    padding: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+.footMenu b{
+    padding-left: 50px;
+}
+#upButton{
+    width: 70px;
+    position: fixed;
+    right: 15px;
+    bottom: 55px;
+    text-align: center;
+}
+#downButton{
+    width: 70px;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    text-align: center;
+}
