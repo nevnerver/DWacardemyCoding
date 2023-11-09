@@ -1,0 +1,221 @@
+/* default.css */
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: rgb(170, 170, 233);
+}
+#wrap{
+    width: 800px;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    height: 80px;
+}
+#nav{
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+}
+.title{
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.menuWrap{
+    text-align: right;
+}
+
+.menu{
+    font-size: 15px;
+    line-height: 40px;
+    padding: 10px 10px;
+}
+
+.menu:hover{
+    cursor: pointer;
+    background: rgb(38, 38, 65);
+    color: white;
+}
+
+#main{
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.siteDetail{
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    position: relative;
+    left: 600px;
+}
+
+.siteDetail img{
+    width: 590px;
+    height: 390px;
+    position:absolute;
+    right:200px;
+    top:10px;
+    border-radius: 10px;
+}
+.siteDetailDescription h4{
+    width: 100%;
+    height: 152px;
+    padding:0;
+}
+
+.button{
+    position: relative;
+    width:200px;
+    margin: 20px 0;
+    padding: 0;
+    left: 600px;
+}
+.freeSign{
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 60px;
+    background: rgb(136, 136, 231);
+    margin: 20px 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 2px 3px rgb(114, 114, 196);
+}
+.devTool{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: -20px;
+    left: 100px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 500;
+    font-size: 14px;
+    background: rgb(136, 136, 231);
+    margin: 20px 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 2px 3px rgb(114, 114, 196);
+}
+.freeSign:hover, .devTool:hover{
+    cursor: pointer;
+    background: rgb(116, 116, 199);
+    box-shadow: inset 0px 0px 2px 3px rgb(63, 63, 126);
+    font-weight: 600;
+}
+
+.card{
+    width: 400px;
+    height: 130px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.build{
+    width: 180px;
+    height: 130px;
+    margin: 0 10px;
+    box-shadow: 5px 5px 4px rgb(67, 60, 94);
+    position: relative;
+    border-radius: 10px;
+}
+.build h3{
+    width: 47px;
+    height: 130px;
+    font-size: 15px;
+    position: absolute;
+    right:0;
+    top:0;
+    writing-mode: vertical-lr;
+    line-height: 47px;
+}
+.imageTest{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 3px solid rgb(56, 9, 9);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.imageTest img{
+    height: 130px;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+.build:hover{
+    cursor: pointer;
+    background: rgb(157, 157, 219);
+}
+.build:hover img{
+    transform:scale(1.2);
+} 
+
+.learn{
+    width: 180px;
+    height: 130px;
+    position: relative;
+    left: 200px;
+    margin: 0 10px ;
+    top: -130px;
+    box-shadow: 5px 5px 4px rgb(67, 60, 94);
+    border-radius: 10px;
+}
+.learn h3{
+    width: 47px;
+    height: 130px;
+    font-size: 15px;
+    position: absolute;
+    right:0;
+    top:0;
+    writing-mode: vertical-lr;
+    line-height: 47px;
+}
+.imageShare{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 3px solid rgb(56, 9, 9);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.imageShare img{
+    height: 130px;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+.learn:hover{
+    cursor: pointer;
+    background: rgb(157, 157, 219);
+}
+.learn:hover img{
+    transform:scale(1.2);
+} 
+
+
+
+#footer{
+    width: 380px;
+    height: 130px;
+    background: rgb(116, 116, 233);
+    text-align: right;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    left: 410px;
+    top: -140px;
+    margin-top: 10px;
+}
+#footer h3,h4{
+    padding: 5px 10px;
+}
