@@ -1,0 +1,57 @@
+<!--main.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #textBox1{
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;            
+            word-wrap: break-word; /* 지정된 크기에서 줄바꿈 허용 */
+            white-space: normal; /* 지정된 크기에서 줄바꿈 허용 */
+           
+            /*꼭 필요한 6개 명령어*/
+            width: 300px;
+            overflow: hidden; 
+            /* overflow hidden; 은 지정된 영역을 벗어낫을때 안보이게 해줌 */
+            /* overflow: auto;  */
+            /* overflow: auto; 는 지정된 영역을 벗어났을때 스크롤을 할 수 있게 만들어줌 */
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 5; /* 몇줄 뒤에서 ...을 쓸건지 */            
+            display: -webkit-box;
+            -webkit-box-orient: vertical;   /* webkit = 애플 , moz = 리눅스*/  
+        }
+        #ellipse{
+            width: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <p id="ellipse">
+        동해물과 백두산이 마르고 닳도록 
+    </p>
+    <div id="textBox1">
+        동해물과 백두산이 마르도 닳도록 하느님이 보우하사 우리나라 만세
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+        남산위에 저소나무 철갑을 두른듯 바람서리 불변함은 우리 기상일세 
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+    </div>
+
+</body>
+</html>
+
+
+<!--  
+    white-space : normal  -  기본값 (너비에 맞춰서 자동 줄바꿈)
+    white-space : nowrap  - 자동 줄바꿈을 적용하지 않는다.
+-->
