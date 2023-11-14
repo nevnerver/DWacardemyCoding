@@ -67,7 +67,7 @@
         num1--;
         console.log(num1);
 
-        //비교연산자 : > , < , >= , <= , == , === , !=
+        //비교연산자 : > , < , >= , <= , == , === , != ( != 는 같지않다 )
         //비교를 하기 위한 연산자, 비교연산자의 결과 값은 참 또는 거짓
         console.log(" > : " + (10>5));
         console.log(" < : " + ( 11<7));
@@ -83,15 +83,87 @@
         ( 10 > 5 ) ? console.log("10이5보다 크다") : console.log("10이 5보다 작다");
 
         // T 익스프레스 탑승 가능 키가 130 이상이다.
-        var tall = parseInt( prompt ("당신의 키는"));
+        // var tall = parseInt( prompt ("당신의 키는"));
         // ( tall >= 130 ) ? console.log("탑승가능") : console.log("탑승불가");
 
-        var result = (tall>=130) ? "탑승가능" : "탑승불가"
-        console.log(result);
+        // var result = (tall>=130) ? "탑승가능" : "탑승불가"
+        // console.log(result);
 
         // 10과 8을 비교하여 두 수 중에서 큰 수를 출력하시오
         var result = (10>8) ? 10 : 8
-        console.log( "두수중 큰수는 : " + result);
+        console.log( "두수 중 큰수 : " + result);
+
+        // var nu1= parseInt(prompt("첫번째 정수입력"));
+        // var num2= parseInt(prompt("두번째정수입력"));
+        // var big = ( num1 > num2 ) ? num1: num2;
+        // console.log( "두수중 큰수:" +big);
+
+        // 두개의 정수를 입력받고, 두수 중에서 가장 작은수를 출력하시오
+        // var num1 = parseInt(prompt("첫번째 정수입력"));
+        // var num2 = parseInt(prompt("두번째 정수입력"));
+        // var small = ( num1 < num2 ) ? num1 : num2;
+        // console.log ("두 수 중 작은수 : " + small);
+
+        // 생년월일을 입력하여 성인인지 아닌지 판별하기
+        // var birth = parseInt( prompt("생년월일 8자 입력"));
+        // // 19991212 -> 19991212/10000 -> parseInt( 1999.1212 ) -> 1919
+        // var age = 2023 - parseInt(birth / 10000 );
+        // var result = (age >= 19) ? " 성인입니다 " : " 성인이 아닙니다 ";
+        // console.log(result);
+        
+        // var num1 = parseInt(prompt("10, 100, 50중에 하나만 입력"));
+
+        // var result = ( num1 == 10 ) ? 10 : " 다른숫자 ";
+        // result = (num1 == 100 ) ? 100 : result ;
+        // result = (num1 == 50 ) ? 50 : result ;
+        // console.log("당신은" + result + "을(를) 입력했습니다."); 
+
+        // var kor = parseInt(prompt("국어점수"));
+        // var eng = parseInt(prompt("영어점수"));
+        // var avg = (kor+eng)/2;
+        // var result = ( avg >= 65 ) ? "통과" : "낙제" ;
+        // console.log( "당신의 평균 점수는" + avg + "입니다." );
+        // console.log( "당신은" + result + "입니다." );
+
+        // 노트북을 사고 싶다. 두대의노트북을 장바구니에 담아놓았다.
+        // 1번 노트북의 가격은 1,290,000원 이다.
+        // 2번 노트북의 가격은 1,854,000원 이다.
+        // 현재 내 통장의 잔고를 입력하여
+        // 몇번째 노트북 구매가 가능한지 또는 두개전부 구매가 불가능 한지출력하시오.
+
+        // var money = parseInt(prompt("통잔잔고를 입력하세요."));
+        // var result = ( money >= 1290000 ) ? "1번 구매가능" : "구매불가" ;
+        //  result = ( money >= 1854000 ) ? "1번 또는 2번 중 하나 구매가능 " : result ;
+        //  result = ( money >= 3144000 ) ? "둘다 구매 가능 " : result ;
+        // console.log ( "당신은" + result + "합니다.");
+
+        // 세개의 정수를 입력받으세요/
+        // 세 정수 중에서 가장 큰 수만 출력
+        // (두개의 숫자가 같은 숫자라도 큰 숫자나오게출력)
+
+        // var a = parseInt(prompt("첫번째 숫자"));
+        // var b = parseInt(prompt("두번째 숫자"));
+        // var c = parseInt(prompt("세번째 숫자"));
+
+        // //가장 큰 수 찾는공
+        // var res = ( a > b ) ? a : b ; 
+        // res = ( res > c ) ? res : c ;
+
+        // // 모두 같은 숫자인지 판별하는 곳
+        // var same = (a == b) ? a : 0 ;
+        // same = ( same == c ) ? 1 : 0 ;
+
+        // res = ( same == 1 ) ? "모두 같다" : "가장큰수 : " + res ;
+        // console.log ( res ) ;
+
+        // 
+
+        var coin = parseInt(Math.random()*2);
+        //0. 앞면 1. 뒷면
+        var user = parseInt( prompt("0-앞면, 1-뒷면"));
+        var result = ( coin == user ) ? "맞췃습니다" : "틀렸습니다" ;
+        console.log(coin);
+        console.log(result);
 
     </script>
 
