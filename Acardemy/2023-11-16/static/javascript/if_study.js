@@ -79,11 +79,42 @@ window.onload=function(){
     //         break;
     // }
 
+    var airjordan = 2;
+    var airmax = 97;
+    var alp = "나이키 에어조던 90 재고";
+    switch( alp.split(" ")[1] ){
+        case "에어조던":
+            document.write("현재 재고수량은" + airjordan + "개");
+            break;
+        case "에어맥스":
+            document.write("현재 재고수량은" + airmax + "개");
+            break;
+        case "a":
+            document.write("apple");
+            break;
+        default:
+            document.write("죄송합니다");
+    }
 
+    /*
+        if(score>=90)
+        else if(score>=80){}
+        else if(score>=70){}
+        else {}
+    
+    */
 
+    var score =75;
+    switch( parseInt(score/10)){
+        case 10: case 9:
+        document.write("A학점"); break;
+        case 8:
+        document.write("B학점"); break;
+        case 7:
+        document.write("C학점"); break;
+        default:
+            document.write("F학점")
 
-
-
-
+    }
 
 };

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    //  apple 주차장의 주차요금 표
+        //   기본 주차비 - 1000원, 기본 시간 - 30분
+        //    ( 30분 이내 주차시 1000원 , 5분 주차해도 1000원 39분까지 1000원)
+        //    10분당 100원씩 추가 ( 40분 주차시 1100원 , 54분 주차시 1200원)
+        //  2시간 이상 주차시 기본 요금 변경
+        //   기본 요금 - 1500원
+        // 4시간 이상 주차시 기본요금 변경
+        //  기본 요금 - 2500원
+        // 8시간 이상 주차시 요금은 무조건 10000원
+        // ( 10시간, 12시간, 9시간43분 전부 다 10000원) 
+        //   주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
+
+        var time = parseInt(prompt("주차시간을 분단위로 입력"));
+        if(time<30){
+            alert("주차요금은 1000원 입니다");
+        }else if(time>=120){
+            if(time>=240){
+                if(time>=480){
+                    alert("주차요금은 10000원 입니다");
+                }else{
+                    alert("주차요금은"+(2500+(parseInt((time-240)/10))*100)+"입니다")
+                }
+            }else{
+                alert("주차요금은"+(1500+(parseInt((time-120)/10))*100)+"입니다")
+            }
+        }else{
+            alert("주차요금은"+(1000+(parseInt((time-30)/10))*100)+"입니다")
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
