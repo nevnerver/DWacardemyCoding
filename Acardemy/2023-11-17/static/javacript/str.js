@@ -109,3 +109,4 @@ console.log(money);
 word="이순신,강감찬,김유신,장보고,최무선,장영실";
 const name = word.split(",");
 console.log(name[3]); 
+
