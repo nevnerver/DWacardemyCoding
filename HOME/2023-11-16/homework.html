@@ -18,25 +18,41 @@
         // ( 10시간, 12시간, 9시간43분 전부 다 10000원) 
         //   주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
 
-        var time = parseInt(prompt("주차시간을 분단위로 입력"));
-        if(time<30){
-            alert("주차요금은 1000원 입니다");
+        // var time = parseInt(prompt("주차시간을 분단위로 입력"));
+        // if(time<30){
+        //     alert("주차요금은 1000원 입니다");
+        // }else if(time>=120){
+        //     if(time>=240){
+        //         if(time>=480){
+        //             alert("주차요금은 10000원 입니다");
+        //         }else{
+        //             alert("주차요금은"+(2500+(parseInt((time-240)/10))*100)+"원 입니다")
+        //         }
+        //     }else{
+        //         alert("주차요금은"+(1500+(parseInt((time-120)/10))*100)+"원 입니다")
+        //     }
+        // }else{
+        //     alert("주차요금은"+(1000+(parseInt((time-30)/10))*100)+"원 입니다")
+        // }
+
+
+        // 범위가 가장 큰거부터 조건을 걸면 편해진다.
+
+        var time = parseInt(prompt("주차시간"));
+        var cost = 1000;
+
+        if(time>=480){
+            cost=10000; time=0;
+        }else if(time>=240){
+            cost=2500; time=time-240;
         }else if(time>=120){
-            if(time>=240){
-                if(time>=480){
-                    alert("주차요금은 10000원 입니다");
-                }else{
-                    alert("주차요금은"+(2500+(parseInt((time-240)/10))*100)+"입니다")
-                }
-            }else{
-                alert("주차요금은"+(1500+(parseInt((time-120)/10))*100)+"입니다")
-            }
+            cost=1500; time=time-120;
         }else{
-            alert("주차요금은"+(1000+(parseInt((time-30)/10))*100)+"입니다")
-        }
+            time= time<30 ? 0 : time-30;
+        } 
 
-
-
+        var price = Math.floor(time/10)*100 + cost;
+        document.write(`주차요금 : ${price}원`);
 
     </script>
 </head>
