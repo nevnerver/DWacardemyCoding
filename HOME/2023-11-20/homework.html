@@ -11,7 +11,7 @@
             user = parseInt(prompt("1~50입력"));
         }
         var a=50, b=1 , max=50;
-        for(;;){
+        for(;;){ // for문에서는 무한반복할때 true를 생략이 가능
             var com = Math.floor(Math.random()*a)+b;
             if (user < com){
                 document.write(`다운 (com:${com} , 범위 : ${b}~${max}) <br>`);

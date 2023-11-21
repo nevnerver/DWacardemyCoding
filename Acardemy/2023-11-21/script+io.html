@@ -1,0 +1,42 @@
+<!-- script.io_html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        window.onload=function(){
+            var nameTag = document.getElementById("name");
+            alert(nameTag.value);
+        }
+
+        function enroll(){
+            var nameTag = document.getElementById("name");
+            alert(nameTag.value);
+        }
+
+        
+
+    </script>
+
+
+</head>
+<body>
+    
+    <input type="text" id="name" value="김유신"><br>
+    <button onclick="enroll()">입력</button>
+    <!-- 
+        버튼 태그에 onclick 을 작성해야 클릭시 동작을 만들 수 있다.
+        onclick 뒤에 작성하는 내용은 자바스크립트에서 실행할 함수라는 이름을 넣어줘야한다.
+     -->
+
+
+    <!-- <input type="number"><br>
+    <input type="date"><br>
+    <input type="password"><br> -->
+
+</body>
+</html>

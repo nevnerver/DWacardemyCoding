@@ -101,21 +101,54 @@
         // 몇개의 숫자를 제시할꺼냐를 입력받아서 진행
 
 
-        var user=0, com=0, 베라=1;
-        while(true){
-            var out=""; //진행 내용을 저장할 변수
-            user = parseInt(prompt("숫자 몇개?"));
-            out += "나 : "  ;
-            for( var u=1; u<=user; u++ ){
-                out +=`${베라++}`;
-            }
-            out += "\n";
-            alert(out);
+        // var user=0, com=0, 베라=1;
+        // var flag=false; //게임을 끝내기 위한 변수
+        // while(true){
+        //     var out=""; //진행 내용을 저장할 변수
+        //     user = parseInt(prompt("숫자 몇개?"));
+        //     out += "나 : "  ;
+        //     for( var u=1; u<=user; u++ ){
+        //         out +=`${베라++} `;
+        //         if(베라>31){ out+="패배"; flag=true; break;} 
+        //     }
+        //     out += "\n";
+        //     alert(out);
+        //     if(flag) break; 
+        //     com = Math.floor(Math.random()*3)+1;
+        //     out = "컴 : ";
+        //     for (var c=1; c<=com; c++){
+        //         out += `${베라++} `;
+        //         if(베라>31){ out+="패배"; flag=true; break;}
+        //     }
+        //     out += "\n";
+        //     alert(out);
+        //     if(flag) break;
+        // }
+
+        // do~while;
+        // for, while 기본동작 순서
+        // 초기값 -> 조건식 비교 -> 참이라면 -> { 내용 } 실행 -> 증감식
+        // -> 조건식 비교 -> 참이라면 -> { 내용 } 실행 -> 증감식 -> ...
+        // ... -> 조건식 비교 -> 거짓이라면 -> 반복문 종료
+        // do~while 초기값 -> { 내용 } 실행 -> 증감식 -> 조건식 비교
+
+        for(var i=10; i<=5; i++){
+            document.write(i+"for 문");
         }
+        var i=10;
+        do{
+            document.write(i+" do~while ");
+        }while(i<=5);
 
-        
 
+        var user=0;
+        do{
+            user = parseInt(prompt("1~50입력"));
+        }while(!(user>=1&&user<=50));
 
+        for(;!(user>=1 && user<=50);){
+            user = parseInt(prompt("1~50입력"));
+        }
 
 
     </script>
