@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"
+		></script>
 
-    <script>
-    // 과제!!
-    // 인구 조사 !!
-    // 가족 구성원의 나이를 입력하기 prompt로 입력
-    // 0을 입력하면 더이상 입력 처리가 안된다.
+		<script>
+			// 과제!!
+			// 인구 조사 !!
+			// 가족 구성원의 나이를 입력하기 prompt로 입력
+			// 0을 입력하면 더이상 입력 처리가 안된다.
 
-    // 입력이 끝나면 결과 출력
-    // 결과 출력 내용은
-    // 노인 : 65세 이상
-    // 성인 : 20세~64세
-    // 청소년 : 8세~19세
-    // 아동 : 1세~7세
-    
-    // 총원 10명 : 노인 2명, 성인 5명 , 청소년 2명 , 아동 3명 
+			// 입력이 끝나면 결과 출력
+			// 결과 출력 내용은
+			// 노인 : 65세 이상
+			// 성인 : 20세~64세
+			// 청소년 : 8세~19세
+			// 아동 : 1세~7세
 
-        
-        fam=0, old=0, adult=0, teen=0, child=0;
+			// 총원 10명 : 노인 2명, 성인 5명 , 청소년 2명 , 아동 3명
 
-        while(true){
-            var age = parseInt(prompt("나이를 입력하세요"));
-            if( age>=65 ){ 
-                fam++;
-                old++;
-            }
-            if( age>=20 && age<65 ){
-                fam++;
-                adult++
-            }
-            if( age>=8 && age<20 ){
-                fam++;
-                teen++;
-            }
-            if( age>=1 && age<8){
-                fam++;
-                child++;
-            }
-            if(age==0){
-               document.write(`총원 ${fam}명 : 노인 ${old}명, 성인 ${adult}명, 청소년 ${teen}명, 아동 ${child}명`)
-                break;
-            }
-        }
-        
+			// var fam=0, old=0, adult=0, teen=0, child=0;
 
+			// while(true){
+			//     var age = parseInt(prompt("나이를 입력하세요"));
+			//     if( age>=65 ){
+			//         fam++;
+			//         old++;
+			//     }
+			//     if( age>=20 && age<65 ){
+			//         fam++;
+			//         adult++
+			//     }
+			//     if( age>=8 && age<20 ){
+			//         fam++;
+			//         teen++;
+			//     }
+			//     if( age>=1 && age<8){
+			//         fam++;
+			//         child++;
+			//     }
+			//     if(age==0){
+			//        document.write(`총원 ${fam}명 : 노인 ${old}명, 성인 ${adult}명, 청소년 ${teen}명, 아동 ${child}명`)
+			//         break;
+			//     }
+			// }
 
+			var count = 0,
+				old = 0,
+				adult = 0,
+				teen = 0,
+				child = 0;
 
-    </script>
+			var end = true; //구성원나이를 입력 가능 또는 입력 불가능 하게 만들기 위한 변수
 
+			function survey() {
+				if (end) {
+					var age = Number($("#age").val());
+					if (age >= 65) old++;
+					else if (age >= 20 && age <= 65) adult++;
+					else if (age >= 8 && age <= 19) teen++;
+					else if (age >= 1 && age <= 7) child++;
+					else if (age == 0) {
+						end = false;
+						count--;
+					}
+					count++;
+					$("#result").html(
+						`총원 ${count}명 : 노인${old}명, 성인${adult}명, 청소년${teen}명, 아동${child}명`
+					);
+				}
+			}
+			// linter 도구 : 자바스크립트 스타일 가이드를 얼마나 준수하여 작성했는지 확인 및 개선, 제안
+			//               https://www.jslint.com/  ,,     https://www.jshint.com/
+		</script>
+	</head>
+	<body>
+		<input type="text" id="age" /><button onclick="survey()">입력</button>
 
-
-</head>
-<body>
-    
-
-</body>
+		<div id="result"></div>
+	</body>
 </html>

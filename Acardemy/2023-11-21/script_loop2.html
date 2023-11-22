@@ -1,189 +1,187 @@
 <!-- script_loop2.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"
+		></script>
 
+		<script>
+			// for(var i=1; i<=10; i++){
+			//     document.write(i+" ");
+			// }
+			// document.write("<br>");
 
-    <script>
+			// var i=1;
+			// while(i<=10){
+			//     document.write(i+" ");
+			//     i++;
+			// }
+			// document.write(`<br>`);
 
-        // for(var i=1; i<=10; i++){
-        //     document.write(i+" ");
-        // }
-        // document.write("<br>");
+			// // for문 - 반복횟수가 정해진 경우에 사용
+			// // while문 - 반복횟수가 정해지지 않은 경우에 사용
+			// // for(;true;){}
+			// // while(true){}
 
-        // var i=1;
-        // while(i<=10){
-        //     document.write(i+" ");
-        //     i++;
-        // }
-        // document.write(`<br>`);
+			// // for ( var i=1; i<=9; i++)
+			// // document.write(`5*${i}=${5*i}<br>`);
 
-        // // for문 - 반복횟수가 정해진 경우에 사용
-        // // while문 - 반복횟수가 정해지지 않은 경우에 사용
-        // // for(;true;){}
-        // // while(true){}    
+			// var i=1;
+			// while(i<=9){
+			//     document.write(`5 * ${i} = ${5*i} <br>`);
+			//     i++;
+			// }
 
-        // // for ( var i=1; i<=9; i++)
-        // // document.write(`5*${i}=${5*i}<br>`);
+			// // 1부터 10 까지 총 합 구하기
 
-        // var i=1;
-        // while(i<=9){
-        //     document.write(`5 * ${i} = ${5*i} <br>`);
-        //     i++;
-        // }
+			// var sum=0;
+			// var i=1;
+			// while(i<=10){
+			//     sum= sum + i;
+			//     i++;
+			// }
+			// document.write(`1부터 10까지의 총 합은 ${sum} <br>`);
 
-        // // 1부터 10 까지 총 합 구하기
+			// for( var i=1; i<=3; i++){
+			//     for ( var k=1; k<=2; k++){
+			//         document.write(`${i} ${k} <br>`);
+			//     }
+			// }
 
-        // var sum=0; 
-        // var i=1;
-        // while(i<=10){
-        //     sum= sum + i;
-        //     i++;
-        // }
-        // document.write(`1부터 10까지의 총 합은 ${sum} <br>`);
+			// var i=1
+			// while(i<=3){
+			//     k=1;
+			//     while(k<=2){
+			//         document.write(`${i} ${k} <br>`);
+			//         k++;
+			//     }
+			//     i++;
+			// }
 
-        // for( var i=1; i<=3; i++){
-        //     for ( var k=1; k<=2; k++){
-        //         document.write(`${i} ${k} <br>`);
-        //     }
-        // }
+			// 지금 현재 시점에서 반복문 구구단 2단부터 9단까지 출력하는거
+			// for문과 while문으로 구현하고 어떻게 동작하는지 이해 된다면
+			// 반복문 기초는 끝!
 
-        // var i=1
-        // while(i<=3){
-        //     k=1;
-        //     while(k<=2){
-        //         document.write(`${i} ${k} <br>`);
-        //         k++;
-        //     }
-        //     i++;
-        // }
+			// for( var i=2; i<=9; i++){
+			//     for( var k=1; k<=9; k++)
+			//         document.write(`${i} * ${k} = ${i*k} <br>`);
+			// }
 
-        // 지금 현재 시점에서 반복문 구구단 2단부터 9단까지 출력하는거
-        // for문과 while문으로 구현하고 어떻게 동작하는지 이해 된다면
-        // 반복문 기초는 끝!
+			// var i=2;
+			// while(i<=9){
+			//     k=1;
+			//     while(k<=9){
+			//         document.write(`${i} * ${k} = ${i*k} <br>`);
+			//         k++;
+			//     }
+			//     i++;
+			// }
 
-        // for( var i=2; i<=9; i++){
-        //     for( var k=1; k<=9; k++)
-        //         document.write(`${i} * ${k} = ${i*k} <br>`);
-        // }
+			// for(;true;){
+			//     var num = parseInt(prompt("숫자입력"));
+			//     if (num == 0) break;
+			// }
 
-        // var i=2;
-        // while(i<=9){
-        //     k=1;
-        //     while(k<=9){
-        //         document.write(`${i} * ${k} = ${i*k} <br>`);
-        //         k++;
-        //     }
-        //     i++;
-        // }
+			// while(true){
+			//     var num = parseInt(prompt("숫자입력"));
+			//     if (num==0) break;
+			// }
 
-        // for(;true;){
-        //     var num = parseInt(prompt("숫자입력"));
-        //     if (num == 0) break;
-        // }
+			// var word="요즘 날씨가 많이 추워졌죠?";
+			// var len = word.length;
+			// while ( len!=-1 ){
+			//     document.write( word.charAt(len--));
+			// }
 
-        // while(true){
-        //     var num = parseInt(prompt("숫자입력"));
-        //     if (num==0) break;
-        // }
+			// 베스킨라빈스 31게임
+			// 31 입력하면 패배
+			// 입력할 수 있는 숫자의 갯수는 최대 3개
+			// 몇개의 숫자를 제시할꺼냐를 입력받아서 진행
 
-        // var word="요즘 날씨가 많이 추워졌죠?";
-        // var len = word.length;
-        // while ( len!=-1 ){
-        //     document.write( word.charAt(len--));
-        // }
+			// var user=0, com=0, 베라=1;
+			// var flag=false; //게임을 끝내기 위한 변수
+			// while(true){
+			//     var out=""; //진행 내용을 저장할 변수
+			//     user = parseInt(prompt("숫자 몇개?"));
+			//     out += "나 : "  ;
+			//     for( var u=1; u<=user; u++ ){
+			//         out +=`${베라++} `;
+			//         if(베라>31){ out+="패배"; flag=true; break;}
+			//     }
+			//     out += "\n";
+			//     alert(out);
+			//     if(flag) break;
+			//     com = Math.floor(Math.random()*3)+1;
+			//     out = "컴 : ";
+			//     for (var c=1; c<=com; c++){
+			//         out += `${베라++} `;
+			//         if(베라>31){ out+="패배"; flag=true; break;}
+			//     }
+			//     out += "\n";
+			//     alert(out);
+			//     if(flag) break;
+			// }
 
-        // 베스킨라빈스 31게임
-        // 31 입력하면 패배
-        // 입력할 수 있는 숫자의 갯수는 최대 3개        
-        // 몇개의 숫자를 제시할꺼냐를 입력받아서 진행
+			// do~while;
+			// for, while 기본동작 순서
+			// 초기값 -> 조건식 비교 -> 참이라면 -> { 내용 } 실행 -> 증감식
+			// -> 조건식 비교 -> 참이라면 -> { 내용 } 실행 -> 증감식 -> ...
+			// ... -> 조건식 비교 -> 거짓이라면 -> 반복문 종료
+			// do~while 초기값 -> { 내용 } 실행 -> 증감식 -> 조건식 비교
 
+			// for(var i=10; i<=5; i++){
+			//     document.write(i+"for 문");
+			// }
+			// var i=10;
+			// do{
+			//     document.write(i+" do~while ");
+			// }while(i<=5);
 
-        // var user=0, com=0, 베라=1;
-        // var flag=false; //게임을 끝내기 위한 변수
-        // while(true){
-        //     var out=""; //진행 내용을 저장할 변수
-        //     user = parseInt(prompt("숫자 몇개?"));
-        //     out += "나 : "  ;
-        //     for( var u=1; u<=user; u++ ){
-        //         out +=`${베라++} `;
-        //         if(베라>31){ out+="패배"; flag=true; break;} 
-        //     }
-        //     out += "\n";
-        //     alert(out);
-        //     if(flag) break; 
-        //     com = Math.floor(Math.random()*3)+1;
-        //     out = "컴 : ";
-        //     for (var c=1; c<=com; c++){
-        //         out += `${베라++} `;
-        //         if(베라>31){ out+="패배"; flag=true; break;}
-        //     }
-        //     out += "\n";
-        //     alert(out);
-        //     if(flag) break;
-        // }
+			// var user=0;
+			// do{
+			//     user = parseInt(prompt("1~50입력"));
+			// }while(!(user>=1&&user<=50));
 
-        // do~while;
-        // for, while 기본동작 순서
-        // 초기값 -> 조건식 비교 -> 참이라면 -> { 내용 } 실행 -> 증감식
-        // -> 조건식 비교 -> 참이라면 -> { 내용 } 실행 -> 증감식 -> ...
-        // ... -> 조건식 비교 -> 거짓이라면 -> 반복문 종료
-        // do~while 초기값 -> { 내용 } 실행 -> 증감식 -> 조건식 비교
+			// for(;!(user>=1 && user<=50);){
+			//     user = parseInt(prompt("1~50입력"));
+			// }
 
-        // for(var i=10; i<=5; i++){
-        //     document.write(i+"for 문");
-        // }
-        // var i=10;
-        // do{
-        //     document.write(i+" do~while ");
-        // }while(i<=5);
+			// 숫자 맞추기
+			// 숫자를 총 세개 입력한다.
+			//  입력한 숫자를 랜덤으로 일치하는 숫자 찾기
 
+			// function find(){
+			//     var num1 = Number( $("#num1").val() );
+			//     var num2 = Number( $("#num2").val() );
+			//     var num3 = Number( $("#num3").val() );
 
-        // var user=0;
-        // do{
-        //     user = parseInt(prompt("1~50입력"));
-        // }while(!(user>=1&&user<=50));
+			//     var count = 0;
+			//     while(true){
+			//         var ok=0; // 숫자가 하나씩 일치 할때 마다 값 증가, 3이 되면 3개 숫자 모두 일치
+			//         var a = Math.floor(Math.random()*45)+1;
+			//         var b = Math.floor(Math.random()*45)+1;
+			//         var c = Math.floor(Math.random()*45)+1;
+			//         if( num1 == a || num1 == b || num1 == c )
+			//             ok++;
+			//         if( num2 == a || num2 == b || num2 == c )
+			//             ok++;
+			//         if( num3 == a || num3 == b || num3 == c )
+			//             ok++;
+			//         count++; // 세개 숫자에 대해 일치여부를 검사했으니 카운팅 1씩 증가
+			//         if(ok==3){
+			//             $("#result").html(`세개 숫자 일치까지 <b>${count}</b>번 동작`);
+			//             break;
+			//         }
+			//     }
+			// }
 
-        // for(;!(user>=1 && user<=50);){
-        //     user = parseInt(prompt("1~50입력"));
-        // }
-
-
-        // 숫자 맞추기
-        // 숫자를 총 세개 입력한다.
-        //  입력한 숫자를 랜덤으로 일치하는 숫자 찾기
-
-
-        // function find(){
-        //     var num1 = Number( $("#num1").val() );
-        //     var num2 = Number( $("#num2").val() );
-        //     var num3 = Number( $("#num3").val() );
-
-        //     var count = 0;
-        //     while(true){
-        //         var ok=0; // 숫자가 하나씩 일치 할때 마다 값 증가, 3이 되면 3개 숫자 모두 일치
-        //         var a = Math.floor(Math.random()*45)+1;
-        //         var b = Math.floor(Math.random()*45)+1;
-        //         var c = Math.floor(Math.random()*45)+1;
-        //         if( num1 == a || num1 == b || num1 == c )
-        //             ok++;
-        //         if( num2 == a || num2 == b || num2 == c )
-        //             ok++;
-        //         if( num3 == a || num3 == b || num3 == c )
-        //             ok++;
-        //         count++; // 세개 숫자에 대해 일치여부를 검사했으니 카운팅 1씩 증가
-        //         if(ok==3){
-        //             $("#result").html(`세개 숫자 일치까지 <b>${count}</b>번 동작`);
-        //             break;
-        //         }
-        //     }
-        // }
-
-        /*
+			/*
             이번 문제는 혼자 아니고 팀으로 문제풀기
             1팀 : 강동욱 , 송재영
             2팀 : 김의찬, 인호성, 박종권
@@ -204,40 +202,34 @@
 
         */
 
-        // 1. 각 숫자는 1~9 사이의 값이다.
+			// 1. 각 숫자는 1~9 사이의 값이다.
 
-            for(var a=1; a<=9; a++){
-                for(var b=1; b<=9; b++){
-                    for(var c=1; c<=9; c++){
-                        for (var d=1; d<=9; d++){
-                            // 2. 4개 숫자는 중복이 없다.
-            
-                if ( a!=b && a!=c && a!=d && b!=c && b!=d && c!=d){
-                    // 3. 1번째 숫자는 4번째 숫자보다 2만큼 크다.
-                    if ( a== d+2 ){
-                        // 4. 2번째 숫자는 3번째 숫자보다 작다.
-                        if ( b < c ){
-                        // 5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
-                        var num = a*1000+b*100+c*10+d;
-                        var temp = d*1000*+c*100+b*10+a;
-                    if ( num + temp == 16896){
-                        alert(num);
-                    }
+			for (var a = 1; a <= 9; a++) {
+				for (var b = 1; b <= 9; b++) {
+					for (var c = 1; c <= 9; c++) {
+						for (var d = 1; d <= 9; d++) {
+							// 2. 4개 숫자는 중복이 없다.
 
-                        }
-                    }
+							if (a != b && a != c && a != d && b != c && b != d && c != d) {
+								// 3. 1번째 숫자는 4번째 숫자보다 2만큼 크다.
+								if (a == d + 2) {
+									// 4. 2번째 숫자는 3번째 숫자보다 작다.
+									if (b < c) {
+										// 5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
+										var num = a * 1000 + b * 100 + c * 10 + d;
+										var temp = d * 1000 * +c * 100 + b * 10 + a;
+										if (num + temp == 16896) {
+											alert(num);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 
-                }
-
-
-                        }
-                    }
-                }
-            }
-
-
-                
-        /*
+			/*
             문제 2. 숫자 야구 게임
             랜덤값으로 3개의 숫자 뽑아내기 ( 중복없음 )
             랜덤 범위는 1~9
@@ -246,24 +238,17 @@
             1,3,5를 입력시 출력 되는 내용은 1스트라이크 0볼 2아웃
             2,8,6을 입력시 출력 되는 내용은 0스트라이크 1볼 2아웃
         */
-            
-
-
-    
-
-    </script>
-    <!-- <style>
+		</script>
+		<!-- <style>
         input{width:50px}
     </style> -->
-
-</head>
-<body>
-    <!-- <input type="text" id="num1">
+	</head>
+	<body>
+		<!-- <input type="text" id="num1">
     <input type="text" id="num2">
     <input type="text" id="num3">
     <button onclick="find()">실행</button>
 
     <div id="result"></div> -->
-
-</body>
+	</body>
 </html>
