@@ -109,21 +109,77 @@
 //     var score = prompt(subject[i] + "점수 입력");
 // }
 
-const subject = ["국어", "수학", "영어", "과학"];
-let idx = 0; //subject 배열의 인덱스 표현 변수
+// const subject = ["국어", "수학", "영어", "과학"];
+// let idx = 0; //subject 배열의 인덱스 표현 변수
 
-let score = new Array(); // 점수저장 배열
+// let score = new Array(); // 점수저장 배열
 
-//window.onload=function(){}
+// //window.onload=function(){}
+
+// $(function () {
+//     //document.getElementById("subject")
+//     $("#subject").text(subject[idx]);
+// });
+
+// function save() {
+//     score.push(Number($("#score").val()));
+//     if (idx == subject.length - 1) {
+//         //document.getElementById("result").innerHTML=
+//         // var total=0;
+//         //for(var i=0; i<score.length; i++)
+//         // total += score[i];
+
+//         var total = score[0] + score[1] + score[2] + score[3];
+//         var avg = total / score.length;
+
+//         var out = "<ul>";
+//         for (var i = 0; i < subject.length; i++) {
+//             out += "<li>" + subject[i] + " : " + score[i] + "</li>";
+//         }
+//         out += "</ul>";
+//         out += "총점 : " + total + "점 평균 : " + avg + "점";
+
+//         $("#result").html(out);
+//     }
+//     $("#subject").text(subject[++idx]);
+//     $("#score").val(""); //input 태그의 value 비우기
+//     $("#score").focus(); //input 태그에 커서표시
+// }
+
+// 5명의 사람들이 있다.
+// 5명이 놀다가 문득 궁금해졌다.
+// 우리들의 평균 키는 얼마일까??
+// 이 사람들의 궁금증을 해결 해주세요!!!~~~
+// member = ["김유신","김민숙","송재열","남기정","서종순"]
+
+const member = ["김유신", "김민숙", "송재열", "남기정", "서종순"];
+let idx = 0; // member 배열의 인덱스
+let total = 0; // 전체 키의 합
+let tall = new Array(); // 키 저장 배열
+let avg_below = new Array(); // 평균보다 작은 키를 넣을 곳
 
 $(function () {
-    //document.getElementById("subject")
-    $("#subject").text(subject[idx]);
+    $("#name").text(member[idx]);
 });
 
-function save() {
-    score.push(Number($("#score").val()));
-    $("#subject").text(subject[++idx]);
-    $("#score").val(""); //input 태그의 value 비우기
-    $("#score").focus(); //input 태그에 커서표시
+function enroll() {
+    tall.push(Number($("#tall").val()));
+    total += tall[idx];
+    if (idx == member.length - 1) {
+        var avg = total / member.length;
+
+        var out = "<ul>";
+        for (var i = 0; i < tall.length; i++) {
+            out += "<li>" + member[i] + " : " + tall[i] + "cm</li>";
+
+            if (tall[i] < avg) avg_below.push(member[i]);
+        }
+        out += "</ul>";
+        out += "평균키 : " + avg + "cm";
+        out += "<div> 평균키 미만 " + avg_below + "</div>";
+        $("#result").html(out);
+    }
+    $("#name").text(member[++idx]);
+    $("#name").val("");
+    $("#name").focus();
 }
