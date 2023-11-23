@@ -20,10 +20,9 @@
 // if(word.indexOf("love")==-1){ // 문자열에 검색문자 또는 문자열이 없다면 -1
 //     console.log("love는 없다");
 // }
-// // 4.indexOf는 문자열의 첫번재부터 검색을 하기때문에 
+// // 4.indexOf는 문자열의 첫번재부터 검색을 하기때문에
 // // 뒤쪽에 있는 문자나 문자열을이 결과로 나오지 않을 수 있다.
 // // lastIndexOf() - 문자열의 뒤쪽에서 검색
-
 
 // // 5. replace - 문자열에서 특정 문자열을 다른 문자열로 변경
 // word = "i like css";
@@ -67,9 +66,9 @@
 //     \d : 숫자 전체
 //     \D : 숫자가 아닌것
 //     \w : 영숫자 문자 (A-Za-z0-9)
-//     /W : 영숫자가 아닌것
-//     /s : spacebar로 만든 공백
-//     /S : space 공백이 아닌것 
+//     \W : 영숫자가 아닌것
+//     \s : spacebar로 만든 공백
+//     \S : space 공백이 아닌것
 
 //     패턴 검색 기준
 //     /패턴/
@@ -86,7 +85,6 @@
 
 //     /^010-?([0-9]{4})-?([0-9]{4})$/
 
-
 // */
 
 // word="나는 20살입니다. \n전화번호는 010-1234-1234 입니다.";
@@ -102,20 +100,19 @@
 
 // var tmoney = "3,120,200원";
 // // var money = tmoney.replace(/\,/g,"").replace(/원$/,''   );
-// var money = tmoney.replace(/[^0-9]/g,'');   
+// var money = tmoney.replace(/[^0-9]/g,'');
 // console.log(money);
 
 // //문자열 나누기 - split()
 // word="이순신,강감찬,김유신,장보고,최무선,장영실";
 // const name = word.split(",");
-// console.log(name[3]); 
+// console.log(name[3]);
 // word = "nice123@naver.com"
 // var id= word.split("@")[0];
 // console.log(id);
 
-
 // // 7. 문자열 추출 - substring()
-// console.log( word.substring(0,7)); //0번째 부터 7번 전까지 추출 
+// console.log( word.substring(0,7)); //0번째 부터 7번 전까지 추출
 // console.log( word.substring(4)); // 4번부터 끝까지 추출
 // console.log( word.substring(0, word.indexOf("@") ));
 // var birth = "19971209";
@@ -131,7 +128,7 @@
 // var text = "강동욱 105,000원-남기현 345,200원-서종우 10,000원-송재영 4,343,290원";
 // // 문제!
 // // 남기현이 보유한 현금은 얼마인가? (정수로 출력)
-// // 강동욱이 보유한 현금에 서종우의 돈을 빼면 얼마인가?? 
+// // 강동욱이 보유한 현금에 서종우의 돈을 빼면 얼마인가??
 // // 송재영의 돈을 434,329원으로 변경하시오
 
 // // toLocaleString
@@ -162,7 +159,7 @@
 // var n = member[3].split(" ")[0];
 // var m = parseInt( member[3].slice(n.length+1).replace(/[^0-9]/g,'') );
 // m = m/10;
-// member[3] = n + " " + (m.toLocaleString()+'원'); 
+// member[3] = n + " " + (m.toLocaleString()+'원');
 // text = member.join("-");
 // console.log( text );
 
@@ -173,7 +170,7 @@
 
 // // 10. 공백제거 - trim() - 문자열의 양쪽 끝 공백 제거
 // console.log("공백제거전 : "+ word)
-// console.log("공백제거후 : " + word.trim()); 
+// console.log("공백제거후 : " + word.trim());
 
 // // 11. 문자열 반복 - repeat()
 // word = "apple";
@@ -230,16 +227,13 @@
 
 // */
 
-
-
-
 let info = "이순신:군인,34세,아산 - 장보고:군인,41세,완도 - 김춘추:정치인,28세,경주";
 let data = info.split(" - ");
-// 출력 - 이름 직업 
-var 이순신_name = data[0].substring(0,data[0].indexOf(":")); //data[0].split(":");
-var 이순신_직업 = data[0].substring(data[0].indexOf(":")+1, data[0].indexOf(","));
-console.log(이순신_name +" " + 이순신_직업 );
+// 출력 - 이름 직업
+var 이순신_name = data[0].substring(0, data[0].indexOf(":")); //data[0].split(":");
+var 이순신_직업 = data[0].substring(data[0].indexOf(":") + 1, data[0].indexOf(","));
+console.log(이순신_name + " " + 이순신_직업);
 
 // 장보고의 나이는 몇인가? 출력 - 나이만 출력하기!!
-var 장보고_나이 = data[1].substring(data[1].indexOf(",")+1, data[1].lastIndexOf(","));
-console.log( parseInt(장보고_나이)); // parseInt() - 앞쪽에 있는 숫자만 정수로 변환    
+var 장보고_나이 = data[1].substring(data[1].indexOf(",") + 1, data[1].lastIndexOf(","));
+console.log(parseInt(장보고_나이)); // parseInt() - 앞쪽에 있는 숫자만 정수로 변환

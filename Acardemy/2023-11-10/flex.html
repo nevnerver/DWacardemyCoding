@@ -1,113 +1,118 @@
 <!-- flex.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .item:nth-child(1){background: yellow; }
-        .item:nth-child(2){background: red; }
-        .item:nth-child(3){background: blue; }
-        .item:nth-child(4){background: pink; }
-        .item:nth-child(5){background: orange; }
-        .item:nth-child(6){background: green; }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .item:nth-child(1) {
+                background: yellow;
+            }
+            .item:nth-child(2) {
+                background: red;
+            }
+            .item:nth-child(3) {
+                background: blue;
+            }
+            .item:nth-child(4) {
+                background: pink;
+            }
+            .item:nth-child(5) {
+                background: orange;
+            }
+            .item:nth-child(6) {
+                background: green;
+            }
 
-        #container1{
-            border:3px solid black;
-            display:flex;
-            width: 300px;
-            height: 100px;
-            justify-content: space-between;
-            align-items: stretch;
-        }
-        #container1 .item{
-            width: 30%;
-        }
+            #container1 {
+                border: 3px solid black;
+                display: flex;
+                width: 300px;
+                height: 100px;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+            #container1 .item {
+                width: 30%;
+            }
 
-        #container2{
-            width: 300px;
-            height: 100px;
-            border: 2px solid black;
-            display: flex;
-            justify-content: center;
-            align-items: end;
-        }
-        .a{
-            align-self: stretch;
-        }
-        .b{ 
-            align-self: start;
-        }
+            #container2 {
+                width: 300px;
+                height: 100px;
+                border: 2px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+            }
+            .a {
+                align-self: stretch;
+            }
+            .b {
+                align-self: start;
+            }
 
-        #container3{
-            border: 2px solid black;
-            width: 400px;
-            /* height: 100px; */
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 20px;
-            column-gap: 20px;
-            padding: 20px;
-        }
+            #container3 {
+                border: 2px solid black;
+                width: 400px;
+                /* height: 100px; */
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                column-gap: 20px;
+                padding: 20px;
+            }
 
-        #container4{
-            box-sizing: border-box;
-            border: 2px solid black;
-            width: 500px;
-            height: 130px;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            /* row-gap: 10px; */
-            justify-content:space-between;
-            column-gap: 10px;
-            padding: 10px;
-        }
-        #container4 .item{
-            height: 30px;
-        }
-
-
-    </style>
-
-</head>
-<body>
-    
-    <div id="container1">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-    </div>
-    <br><br>
-    <div id="container2">
-        <div class="item">1</div>
-        <div class="item a">2</div>
-        <div class="item b">3</div>
-    </div>
-    <br><br>
-    <div id="container3">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-    </div>
-    <br><br>
-    <div id="container4">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-    </div>
-
-
-</body>
+            #container4 {
+                box-sizing: border-box;
+                border: 2px solid black;
+                width: 500px;
+                height: 130px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                /* row-gap: 10px; */
+                justify-content: space-between;
+                column-gap: 10px;
+                padding: 10px;
+            }
+            #container4 .item {
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        <br /><br />
+        <div id="container2">
+            <div class="item">1</div>
+            <div class="item a">2</div>
+            <div class="item b">3</div>
+        </div>
+        <br /><br />
+        <div id="container3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+        <br /><br />
+        <div id="container4">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </body>
 </html>
-
 
 <!--
     display:flex; 

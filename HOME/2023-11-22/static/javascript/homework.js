@@ -12,13 +12,13 @@ let avg_above = new Array();
 
 for (var i = 0; i < era.length; i++) {
     total += era[i];
-    var avg = total / era.length;
 }
+var avg = total / era.length;
 document.write("평균치 : " + avg + "점 <br>");
 
 for (var i = 0; i < era.length; i++) {
-    if (era[i] > avg) {
-        avg_above.push(name[i]);
+    if (era[i] >= avg) {
+        avg_above.push(" " + name[i] + " ");
     }
 }
 document.write("평균치 이상인 선수 : " + avg_above);
