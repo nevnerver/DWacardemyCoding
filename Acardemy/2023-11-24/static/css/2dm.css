@@ -14,5 +14,12 @@
 }
 
 .pic {
-    width: 50%;
+    width: 25%;
+    height: 50px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.pic img {
+    width: 100%;
 }

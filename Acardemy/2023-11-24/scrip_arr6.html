@@ -1,0 +1,71 @@
+<!-- script_arr6.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        let name = ["하지원", "전지현", "남기현", "이다희", "이가림", "김정환"];
+
+        let score = [ //[국어, 수학, 영어, 총점, 평균]
+            [78, 87, 54, 219, 73], // 하지원 점수
+            [80, 70, 60, 210, 70], // 전지현 점수
+            [88, 99, 65, 252, 84], // 남기현 점수
+            [94, 34, 87, 215, 71], // 이다희 점수
+            [10, 20, 30, 60, 20],  // 이가림 점수
+            [1, 2, 3, 6, 2]        // 김정환 점수
+        ];
+
+        // id가 name인곳에 이름을 입력하여 성적조회버튼을 클릭한다.
+        // 입력한 이름의 학생 성적을 국어: 점 수학: 점 영어: 점 평균: 점 출력
+        // 이름이 없는 학생 검색시 등록되지 않은 학생입니다. 출력
+        // id가 avg인곳에 평균 점수를 입력하고 검색 버튼 클릭
+        // 입력한 평균 점수 이상인 학생들의 이름을 출력하세요.
+        // 해당되는 학생이 한명도 없을시 조건에 맞는 학생이 없습니다. 출력
+
+
+        // $(function () {
+        //     $("#name").text(name[idx]);
+        // });
+
+        function search() {
+            var input_name = $("#name").val();
+            let idx = name.indexOf(input_name);
+            if (idx == -1) $("#result").html(`등록되지 않은 학생입니다.`);
+            else
+                $("#result").html(`국어 : ${score[idx][0]}점, 수학 : ${score[idx][1]}점, 영어 : ${score[idx][2]}점, 평균 : ${score[idx][4]}점 `);
+        }
+
+        function over() {
+            var avg = parseInt($("#avg").val());
+            let over_avg = new Array();
+            for (var i = 0; i < score.length; i++) {
+                if (avg <= score[i][4])
+                    over_avg.push(name[i]);
+            }
+            if (over_avg == "")
+                over_avg = `조건에 맞는 학생이 없습니다.`;
+            $("#result").text(over_avg);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="name"><button onclick="search()">성적조회</button>
+    </div>
+    <div>
+        <input type="text" id="avg"><button onclick="over()">검색</button>
+    </div>
+    <div id="result"></div>
+</body>
+
+</html>
