@@ -54,9 +54,9 @@ if(조건식){
 //     console.log("미성년자입니다");
 // }
 
-    //국어 , 영어 , 수학 3 과목 점수 입력 받기
-    // 3 과목의 평균 점수가 65점 이상이면 통과 라고 출력
-    // 65점 미만이면 낙제라고 출력하시오.
+//국어 , 영어 , 수학 3 과목 점수 입력 받기
+// 3 과목의 평균 점수가 65점 이상이면 통과 라고 출력
+// 65점 미만이면 낙제라고 출력하시오.
 
 // var kor = parseInt(prompt("국어 점수"));
 // var eng = parseInt(prompt("영어 점수"));
@@ -74,62 +74,62 @@ if(조건식){
 
 // css 선택자 id - # , class - .
 
-// 브라우저에 html태그가 모두 로딩(화면표시)되면 자바스크립트 코드를 실행시키는 방법 
-var com=Math.floor(Math.random()*3)+1;
+// 브라우저에 html태그가 모두 로딩(화면표시)되면 자바스크립트 코드를 실행시키는 방법
+var com = Math.floor(Math.random() * 3) + 1;
 
-window.onload=function(){
-
+window.onload = function () {
     //가위 바위 보 게임 만들기
     // 1.가위 2.바위 3.보
-    
+
     var scis = document.getElementById("scissors");
     var rock = document.getElementById("rock");
     var paper = document.getElementById("paper");
 
-    scis.addEventListener("click", function(){ //가위 클릭
-        if(com==1) {
+    scis.addEventListener("click", function () {
+        //가위 클릭
+        if (com == 1) {
             alert("비김");
-        }else if(com==3){
+        } else if (com == 3) {
             alert("승리");
-        }else{
+        } else {
             alert("패배");
         }
-        com=Math.floor(Math.random()*3)+1;
-        scis.style.background="red";
-        paper.style.background="white";
-        rock.style.background="white";
+        com = Math.floor(Math.random() * 3) + 1;
+        scis.style.background = "red";
+        paper.style.background = "white";
+        rock.style.background = "white";
     });
-    rock.addEventListener("click", function(){ // 바위 클릭
-        if(com==2){
+    rock.addEventListener("click", function () {
+        // 바위 클릭
+        if (com == 2) {
             alert("비김");
-        }else if(com==1){
+        } else if (com == 1) {
             alert("승리");
-        }else{
+        } else {
             alert("패배");
         }
-        com=Math.floor(Math.random()*3)+1;
-        rock.style.background="red";
-        scis.style.background="white";
-        paper.style.background="white"; 
+        com = Math.floor(Math.random() * 3) + 1;
+        rock.style.background = "red";
+        scis.style.background = "white";
+        paper.style.background = "white";
     });
-    paper.addEventListener("click", function(){ // 보 클릭
-        if(com==3){
+    paper.addEventListener("click", function () {
+        // 보 클릭
+        if (com == 3) {
             alert("비김");
-        }else if(com==2){
+        } else if (com == 2) {
             alert("승리");
-        }else{
+        } else {
             alert("패배");
         }
-        com=Math.floor(Math.random()*3)+1;
-        paper.style.background="red";
-        scis.style.background="white";
-        rock.style.background="white";
+        com = Math.floor(Math.random() * 3) + 1;
+        paper.style.background = "red";
+        scis.style.background = "white";
+        rock.style.background = "white";
     });
 
     // 자바스크립트로 스타일을 주면 태그에 바로 들어가기 때문에
     // css나 다른 명령어로 효과를 줘도 효과가 안들어감.
-
-
 
     // var com=parseInt(Math.random()*3)+1;
     // var user=parseInt(prompt("1.가위 2.바위 3.보"));
@@ -150,20 +150,11 @@ window.onload=function(){
     //     alert("졌습니다");
     // }
 
-
-
-
-
-
-
-
-
     //세개의 정수를 입력받아 가장 작은수 출력, 모두 같다면 같다 출력
 
     // var num1=parseInt(prompt("첫번째 정수"));
     // var num2=parseInt(prompt("두번째 정수"));
     // var num3=parseInt(prompt("세번째 정수"));
-
 
     // if( num1==num2 && num1==num3 ){
     //     alert("모두 같은 숫자");
@@ -175,7 +166,6 @@ window.onload=function(){
     //     alert("작은수 : " + num3);
     // }
 
-
     // // if( num1==num2 && num1==num3 ){
     // //     alert("모두 같은 숫자");
     // // }else if(num1 < num2 && num1 < num3){
@@ -185,10 +175,6 @@ window.onload=function(){
     // // }else if(num3 < num1 && num3 < num2){
     // //     alert("작은수 : " + num3);
     // // }
-
-    
-
-
 
     // if(num1 < num2){
     //     if(num1 < num3){
@@ -201,11 +187,6 @@ window.onload=function(){
     // }else{
     //     alert("작은수 : " + num3);
     // }
-
-
-
-
-
 
     // var coin = Math.floor(Math.random()*2)+1;
 
@@ -233,5 +214,3 @@ window.onload=function(){
     //     // alert("뒷면 선택");
     // });
 };
-
-

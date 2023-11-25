@@ -1,94 +1,89 @@
 <!-- table2.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 테이블과 css </title>
-    <link rel="shortcut icon" href="./nnwhite.ico">
-    
-    <!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>테이블과 css</title>
+        <link rel="shortcut icon" href="./nnwhite.ico" />
+
+        <!-- 
     css의 웹 표준은 head태그 안 <style>에서 작성
     크기:px
     모양:solid(직선), dotted(점선)
     border:크기 모양 색;
     css는 /* */ <-이게 주석이다
     -->
-    <style>     
-        /* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dokdo&family=Dongle&family=Noto+Sans+KR:wght@100;200;300&family=Song+Myung&display=swap');
+        <style>
+            /* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dokdo&family=Dongle&family=Noto+Sans+KR:wght@100;200;300&family=Song+Myung&display=swap');
         
         table{
             border-collapse: collapse;  표 사이 간격 없애기
         }
         td{
-           border:1px solid black;
-           width:100px;
-           height:50px;
-           background-color: blueviolet;
-           text-align:center;
-           font-size:25px; 단위를 pt로 써도 되고 px로 써도 됨
-           color: violet; 글씨 색 바꾸기는 단순하게 color
-           font-weight: 900; 글씨 굵기 100~900 단위는 100단위
-           font-family:"Song Myung"; 내 컴퓨터에 깔린 글꼴 or 웹폰트 사용가능
-           vertical-align: middle;  수직정렬 top, middle, bottom 
-        } */
-    
-        /* .클래스명 -> .은 클래스를 의미한다. */
-        /* .클래스명(tr) td 를 하면 그 tr 밑 모든 td가 적용 */
-
-        .name{
-            width:200px;
-            background-color: ivory;
-            height:50px;
-            text-align:center;
-        }
-        .age{
-            border:2px dotted red;
-            font-size:40px;
-        }
-
-        /*상위태그를 이용하여 하위태그에 스타일을 적용시키면 하위태그에 직접 스타일을 적용시켜도 적용안됨 */
-        /* .XXX , .YYY , .ZZZ { } 이런식으로 하면 여러개가 공통으로 적용됨 */
-
-        .info .job{
-            border:3px solid yellow;
-        }
-
-        .job{
-            border:1px solid blue;
+            border:1px solid black;
             width:100px;
-        }
+            height:50px;
+            background-color: blueviolet;
+            text-align:center;
+            font-size:25px; 단위를 pt로 써도 되고 px로 써도 됨
+            color: violet; 글씨 색 바꾸기는 단순하게 color
+            font-weight: 900; 글씨 굵기 100~900 단위는 100단위
+            font-family:"Song Myung"; 내 컴퓨터에 깔린 글꼴 or 웹폰트 사용가능
+            vertical-align: middle;  수직정렬 top, middle, bottom 
+        } */
 
-        .info{
-            font-size: 20px;
-        }
+            /* .클래스명 -> .은 클래스를 의미한다. */
+            /* .클래스명(tr) td 를 하면 그 tr 밑 모든 td가 적용 */
 
-        .name:hover{
-            font-size:30px;
-            color:blue;
-            background-color: aquamarine;
-        }
-        
-    </style>
+            .name {
+                width: 200px;
+                background-color: ivory;
+                height: 50px;
+                text-align: center;
+            }
+            .age {
+                border: 2px dotted red;
+                font-size: 40px;
+            }
 
-</head>
-<body>
-    
-    <table class="info">
-        <tr>
-            <td class="name">이순신</td>
-            <td class="age">34세</td>
-            <td class="job">군인</td>
-        </tr>
-        <tr>
-            <td class="name">정약용</td>
-            <td class="age">39세</td>
-            <td class="job">과학자</td>
-        </tr>
-    </table>
+            /*상위태그를 이용하여 하위태그에 스타일을 적용시키면 하위태그에 직접 스타일을 적용시켜도 적용안됨 */
+            /* .XXX , .YYY , .ZZZ { } 이런식으로 하면 여러개가 공통으로 적용됨 */
 
+            .info .job {
+                border: 3px solid yellow;
+            }
 
-</body>
+            .job {
+                border: 1px solid blue;
+                width: 100px;
+            }
+
+            .info {
+                font-size: 20px;
+            }
+
+            .name:hover {
+                font-size: 30px;
+                color: blue;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="info">
+            <tr>
+                <td class="name">이순신</td>
+                <td class="age">34세</td>
+                <td class="job">군인</td>
+            </tr>
+            <tr>
+                <td class="name">정약용</td>
+                <td class="age">39세</td>
+                <td class="job">과학자</td>
+            </tr>
+        </table>
+    </body>
 </html>
 
 <!--
