@@ -1,181 +1,172 @@
 <!-- javascript_연산자2.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-    <script>
-        // 논리연산자
-        // - 참(true) , 거짓(false) 을 연산 하는 연산자
-        // and(&&), or(||), not(!) 
+        <script>
+            // 논리연산자
+            // - 참(true) , 거짓(false) 을 연산 하는 연산자
+            // and(&&), or(||), not(!)
 
-        // ( 10  > 5 ) && ( 5 < 7 ) ;
+            // ( 10  > 5 ) && ( 5 < 7 ) ;
 
-        // T 익스프레스 타려면 키가 130이상 , 190 이하
-        // ( tall >= 130 ) && ( tall <= 190 ) && 연산자는 곱하기
+            // T 익스프레스 타려면 키가 130이상 , 190 이하
+            // ( tall >= 130 ) && ( tall <= 190 ) && 연산자는 곱하기
 
-        // 놀이기구 이용조건 키가 130 이상 또는 나이가 15살 이상
-        // ( tall >= 130 ) || ( age >= 15 ) || 연산자는 더하기
+            // 놀이기구 이용조건 키가 130 이상 또는 나이가 15살 이상
+            // ( tall >= 130 ) || ( age >= 15 ) || 연산자는 더하기
 
-        // (a>50) && (b<10) && ((c<20) || (d>40))
+            // (a>50) && (b<10) && ((c<20) || (d>40))
 
-        // !(a%10==0) 
-        // ( a%10 != 0)
+            // !(a%10==0)
+            // ( a%10 != 0)
 
-        // 세개의 정수 중 큰 수 출력, 세개가 모두 같으면 같다 출력
+            // 세개의 정수 중 큰 수 출력, 세개가 모두 같으면 같다 출력
 
-        // var num1 = parseInt(prompt("첫번째 정수"));
-        // var num2 = parseInt(prompt("두번째 정수"));
-        // var num3 = parseInt(prompt("세번째 정수"));
+            // var num1 = parseInt(prompt("첫번째 정수"));
+            // var num2 = parseInt(prompt("두번째 정수"));
+            // var num3 = parseInt(prompt("세번째 정수"));
 
-        // var rseult = ( num1 > num2 ) ? num1 : num2;
-        // result = ( result > num3 ) ? result : num3;
-        // result = ( num1==num2 && num1==num3 ) ? "모두같다" : "큰수 : " + result;
+            // var rseult = ( num1 > num2 ) ? num1 : num2;
+            // result = ( result > num3 ) ? result : num3;
+            // result = ( num1==num2 && num1==num3 ) ? "모두같다" : "큰수 : " + result;
 
-        // and 연산자는 여러개의 조건을 만들어야 되는 경우에 조건 사이사이에
-        // 그리고를 넣어서 표현했을때 자연스러워 한다.
-        // 심부름으로 소금, 고추장을 사오라고 했다면
-        // 심부름을 잘 마치려면 소금하고 고추장을 사와야 한다.
-        // 소금하고 (그리고) 고추장
+            // and 연산자는 여러개의 조건을 만들어야 되는 경우에 조건 사이사이에
+            // 그리고를 넣어서 표현했을때 자연스러워 한다.
+            // 심부름으로 소금, 고추장을 사오라고 했다면
+            // 심부름을 잘 마치려면 소금하고 고추장을 사와야 한다.
+            // 소금하고 (그리고) 고추장
 
-        // or연산자는 여러개의 조건을 사용해서 만들어야 하는 경우에 조건 사이사이에
-        // 또는 을 넣어서 표현했을때 자연스러워야  한다.
-        // 심부름으로 간장이나 액젓을 사오라고 했다면
-        // 간장 또는 액젓 둘중에 하나만 사가면 된다.
-        // 간장 (또는) 액젓
+            // or연산자는 여러개의 조건을 사용해서 만들어야 하는 경우에 조건 사이사이에
+            // 또는 을 넣어서 표현했을때 자연스러워야  한다.
+            // 심부름으로 간장이나 액젓을 사오라고 했다면
+            // 간장 또는 액젓 둘중에 하나만 사가면 된다.
+            // 간장 (또는) 액젓
 
-        // 야바위 만들기 
-        // 종이컵이 세개가 있다. 세개의 종이컵 중 한군데에만 주사위가 들어있다.
-        // 주사위가 들어잇는 종이컵을 맞추면 2배
-        // 주사위 위치도 맞추고 주사위 값도 맞추면 6배
-        // 주사위는 사면체이다. 
+            // 야바위 만들기
+            // 종이컵이 세개가 있다. 세개의 종이컵 중 한군데에만 주사위가 들어있다.
+            // 주사위가 들어잇는 종이컵을 맞추면 2배
+            // 주사위 위치도 맞추고 주사위 값도 맞추면 6배
+            // 주사위는 사면체이다.
 
-        // var dealer = parseInt(Math.random()*3)+1;
-        // var dice = parseInt(Math.random()*4)+1;
-        
-        // var user_cup = parseInt(prompt("몇번째 종이컵 선택"));
-        // var user_dice = parseInt(prompt("주사위값은?"));    
-        
-        // var result = ( dealer == user_cup ) ? ( dice == user_dice ) ? "6배" : "2배" : "꽝";
+            // var dealer = parseInt(Math.random()*3)+1;
+            // var dice = parseInt(Math.random()*4)+1;
 
-        // var result = (dealer == user_cup && dice == user_dice ) ? "6배" : (dealer == user) ? "2배" : "꽝" ;
+            // var user_cup = parseInt(prompt("몇번째 종이컵 선택"));
+            // var user_dice = parseInt(prompt("주사위값은?"));
 
-        // console.log(result);
-        
-        // 가위 바위 보 !!
-        // 1.가위 2.바위 3.보
-        
-        // var com = parseInt(Math.random()*3)+1;
-        // var user = parseInt(prompt("1.가위 2.바위 3.보"));
+            // var result = ( dealer == user_cup ) ? ( dice == user_dice ) ? "6배" : "2배" : "꽝";
 
-        // // var result = ( com == user ) ? "비김" : 
-        // //                 ( com==1 && user==2 ) || ( com==2 && user==3) || ( com==3 && user==1) ? "이김" : "패배";
+            // var result = (dealer == user_cup && dice == user_dice ) ? "6배" : (dealer == user) ? "2배" : "꽝" ;
 
-        // var cl = user - com ;
-        // var result = (cl==0) ? "비김" : ( cl == 1 || cl == -2) ? "이김" : "패배";
-        
-        // console.log( result );
+            // console.log(result);
 
-        // document.write("<div class=red></div>");
-        // 문자열 비교하기는 a === "사각형" 
-        // 1. 사각형의 색상을 입력하세요. (빨강, 노랑, 파랑)
-        // 2. 크기를 입력하세요. ( 1, 2, 3 ) 1- 100,100  2-200,200 3-300,300
+            // 가위 바위 보 !!
+            // 1.가위 2.바위 3.보
 
+            // var com = parseInt(Math.random()*3)+1;
+            // var user = parseInt(prompt("1.가위 2.바위 3.보"));
 
-        // var color = prompt("빨강 , 노랑 , 파랑 중 하나")
-        // var size = prompt(" 1 , 2 , 3 중 하나")
+            // // var result = ( com == user ) ? "비김" :
+            // //                 ( com==1 && user==2 ) || ( com==2 && user==3) || ( com==3 && user==1) ? "이김" : "패배";
 
-        // var square = ( color === "빨강" && size == 1 ) ? "<div class=redone></div>" : 
-        //                 ( color === "빨강" && size == 2 ) ? "<div class=redtwo></div>" :
-        //                 ( color === "빨강" && size == 3 ) ? "<div class=redthree></div>" :
-        //                 ( color === "노랑" && size == 1 ) ? "<div class=yellowone></div>" :
-        //                 ( color === "노랑" && size == 2 ) ? "<div class=yellowtwo></div>": 
-        //                 ( color === "노랑" && size == 3 ) ? "<div class=yellowthree></div>" :
-        //                 ( color === "파랑" && size == 1 ) ? "<div class=blueone></div>" :
-        //                 ( color === "파랑" && size == 2 ) ? "<div class=bluetwo></div>" : 
-        //                 ( color === "파랑" && size == 3 ) ? "<div class=bluethree></div>" : "잘못입력됨" ;
+            // var cl = user - com ;
+            // var result = (cl==0) ? "비김" : ( cl == 1 || cl == -2) ? "이김" : "패배";
 
-        // document.write(square);
+            // console.log( result );
 
+            // document.write("<div class=red></div>");
+            // 문자열 비교하기는 a === "사각형"
+            // 1. 사각형의 색상을 입력하세요. (빨강, 노랑, 파랑)
+            // 2. 크기를 입력하세요. ( 1, 2, 3 ) 1- 100,100  2-200,200 3-300,300
 
+            // var color = prompt("빨강 , 노랑 , 파랑 중 하나")
+            // var size = prompt(" 1 , 2 , 3 중 하나")
 
-        // var color = prompt("사각형 색상 입력(빨강, 노랑, 파랑)");
-        // var size = prompt("크기입력 (1,2,3)");
+            // var square = ( color === "빨강" && size == 1 ) ? "<div class=redone></div>" :
+            //                 ( color === "빨강" && size == 2 ) ? "<div class=redtwo></div>" :
+            //                 ( color === "빨강" && size == 3 ) ? "<div class=redthree></div>" :
+            //                 ( color === "노랑" && size == 1 ) ? "<div class=yellowone></div>" :
+            //                 ( color === "노랑" && size == 2 ) ? "<div class=yellowtwo></div>":
+            //                 ( color === "노랑" && size == 3 ) ? "<div class=yellowthree></div>" :
+            //                 ( color === "파랑" && size == 1 ) ? "<div class=blueone></div>" :
+            //                 ( color === "파랑" && size == 2 ) ? "<div class=bluetwo></div>" :
+            //                 ( color === "파랑" && size == 3 ) ? "<div class=bluethree></div>" : "잘못입력됨" ;
 
-        // var className = (color==="빨강" && size==="1") ? "red one" :
-        //     (color==="빨강" && size==="2") ? "red two" :
-        //     (color==="빨강" && size==="3") ? "red three" : 
-        //     (color==="파랑" && size==="1") ? "blue one" : 
-        //     (color==="파랑" && size==="2") ? "blue two" : 
-        //     (color==="파랑" && size==="3") ? "blue three" : 
-        //     (color==="노랑" && size==="1") ? "yellow one" : 
-        //     (color==="노랑" && size==="2") ? "yellow two" : 
-        //     (color==="노랑" && size==="3") ? "yellow three" : "" ;
+            // document.write(square);
 
-        // document.write(`<div class='${className}'></div>`);
+            // var color = prompt("사각형 색상 입력(빨강, 노랑, 파랑)");
+            // var size = prompt("크기입력 (1,2,3)");
 
-        // 조건연산자 - 조건식의 결과에 따른 동작을 간단하게 구현할때 사용
-        // a != 0 ? 100 : 0 ;
+            // var className = (color==="빨강" && size==="1") ? "red one" :
+            //     (color==="빨강" && size==="2") ? "red two" :
+            //     (color==="빨강" && size==="3") ? "red three" :
+            //     (color==="파랑" && size==="1") ? "blue one" :
+            //     (color==="파랑" && size==="2") ? "blue two" :
+            //     (color==="파랑" && size==="3") ? "blue three" :
+            //     (color==="노랑" && size==="1") ? "yellow one" :
+            //     (color==="노랑" && size==="2") ? "yellow two" :
+            //     (color==="노랑" && size==="3") ? "yellow three" : "" ;
 
-        // 조건문 if , switch
+            // document.write(`<div class='${className}'></div>`);
 
+            // 조건연산자 - 조건식의 결과에 따른 동작을 간단하게 구현할때 사용
+            // a != 0 ? 100 : 0 ;
 
-        // if문 - 조건식의 참, 거짓에 따라 내용이 실행된다.
-        // var tall=parseInt(prompt("키를 적어주세요"));
-        // if ( tall>=130 ) {
-        //     document.write("탑승가능");
-        //     console.log("탑승가능");
-        // }else{
-        //     document.write("탑승불가");
-        //     console.log("탑승불가능");
-        // }
-        
-        //if(조건식){ 조건식이 참일경우 내용 } 
-        //         else{ 조건식이 거짓일 경우 내용 }
-        // 필요한 내용 얼마든지 다 넣어도 됨.
-        
-        //두개의 정수를 입력받아 가장 작은 숫자만 출력
-        // var num1 = parseInt(prompt("첫번째 숫자"));
-        // var num2 = parseInt(prompt("두번째 숫자"));
-        // if ( num1 < num2 ){
-        //     document.write(num1);
-        //     console.log(num1);
-        // }else{
-        //     document.write(num2);
-        //     console.log(num2);
-        // }
+            // 조건문 if , switch
 
-        // prompt("다음 추가 등록을 하시겠습니까?(y/n)")
-        // y 입력시 - 추가등록을 시작합니다. 출력
-        // n 입력시 - 등록을 종료합니다 .출력
-        // 대소문자 모두 인식하도록 만들기
-        var user = prompt("다음 추가 등록을 하시겠습니까?(y/n)")
-        if( user === "y" || user === "Y"  ){
-            document.write("추가등록을 시작합니다");
-        }else{
-            if( user === "n" || user === "N"){
-                document.write("등록을 종료합니다");
-            }else{
-                document.write("");
+            // if문 - 조건식의 참, 거짓에 따라 내용이 실행된다.
+            // var tall=parseInt(prompt("키를 적어주세요"));
+            // if ( tall>=130 ) {
+            //     document.write("탑승가능");
+            //     console.log("탑승가능");
+            // }else{
+            //     document.write("탑승불가");
+            //     console.log("탑승불가능");
+            // }
+
+            //if(조건식){ 조건식이 참일경우 내용 }
+            //         else{ 조건식이 거짓일 경우 내용 }
+            // 필요한 내용 얼마든지 다 넣어도 됨.
+
+            //두개의 정수를 입력받아 가장 작은 숫자만 출력
+            // var num1 = parseInt(prompt("첫번째 숫자"));
+            // var num2 = parseInt(prompt("두번째 숫자"));
+            // if ( num1 < num2 ){
+            //     document.write(num1);
+            //     console.log(num1);
+            // }else{
+            //     document.write(num2);
+            //     console.log(num2);
+            // }
+
+            // prompt("다음 추가 등록을 하시겠습니까?(y/n)")
+            // y 입력시 - 추가등록을 시작합니다. 출력
+            // n 입력시 - 등록을 종료합니다 .출력
+            // 대소문자 모두 인식하도록 만들기
+            var user = prompt("다음 추가 등록을 하시겠습니까?(y/n)");
+            if (user === "y" || user === "Y") {
+                document.write("추가등록을 시작합니다");
+            } else {
+                if (user === "n" || user === "N") {
+                    document.write("등록을 종료합니다");
+                } else {
+                    document.write("");
+                }
             }
-        }
-        
-
-
-    </script>
-    <style>
-
-        /* .red{background: red;}
+        </script>
+        <style>
+            /* .red{background: red;}
         .yellow{background: yellow;}
         .blue{background: blue;}
         .one{width: 100px; height: 100px;}
         .two{width: 200px; height: 200px;}
         .three{width: 300px; height: 300px;} */
 
-
-        /* .redone{
+            /* .redone{
             background: red;
             width: 100px;
             height: 100px
@@ -226,12 +217,7 @@
             width: 300px;
             height: 300px;
         } */
-
-    </style>
-
-</head>
-<body>
-
-    
-</body>
+        </style>
+    </head>
+    <body></body>
 </html>
