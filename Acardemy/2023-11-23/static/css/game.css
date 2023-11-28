@@ -45,16 +45,42 @@
     border-color: purple;
 }
 
-/*  
-    black_bg = .modal_bg
-    modal_wrap = .result_detail
-*/
 
 #result_modal {
     display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* viewport height - 화면 높이 */
+    z-index: 1000;
+}
+
+.modal_bg {
+    background: #555555;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
 }
 
 .result_detail {
+    position: absolute;
+    background: #eeeeee;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .result_detail {
     position: absolute;
     top: 50px;
     left: -100px;
@@ -81,4 +107,4 @@
     text-align: center;
     line-height: 400px;
     font-size: 40px;
-}
+} */

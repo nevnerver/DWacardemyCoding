@@ -1,0 +1,19 @@
+.checkWrap {
+    width: 200px;
+}
+
+.listBox {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.agree {
+    margin: 7px 0;
+}
+
+#pass {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+}

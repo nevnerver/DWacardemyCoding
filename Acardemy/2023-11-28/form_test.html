@@ -1,0 +1,44 @@
+<!-- form_test.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./static/css/form_test.css">
+    <script src="./static/javascript/form_test.js"></script>
+
+</head>
+
+<body>
+
+    <form method="get" accept="pass.html">
+        <div class="checkWrap">
+            <div class="allBox">
+                <input type="checkbox" name="allchk" id="allchk">모두 동의
+            </div>
+            <div class="listBox">
+                <span><input type="checkbox" name="agr" class="agree" value="개인정보">개인정보활용</span>
+                <span><input type="checkbox" name="agr" class="agree" value="정보제공">정보제공</span>
+                <span><input type="checkbox" name="agr" class="agree" value="이벤트알림">이벤트알림</span>
+                <span><input type="checkbox" name="agr" class="agree" value="보험가입">보험가입</span>
+            </div>
+        </div>
+        <button type="button" id="pass"> 다음 진행 </button>
+    </form>
+
+    <!-- 
+        모두 동의 체크시 전체 체크 및 해제
+        체크 목록 중 하나라도 체크 해제 되면 모두동의 체크 해제
+
+        다음 진행 버튼 클릭 시 모두 체크 안되어 있으면 모두 체크하세요 라고 멘트 띄우기
+    -->
+
+</body>
+
+</html>
