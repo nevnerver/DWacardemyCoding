@@ -45,7 +45,6 @@
     border-color: purple;
 }
 
-
 #result_modal {
     display: none;
     width: 100%;
@@ -78,7 +77,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 /* .result_detail {
     position: absolute;
