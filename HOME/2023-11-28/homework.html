@@ -1,185 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            width: 1100px;
+            height: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #grass {
+            position: relative;
+            top: 500px;
+            width: 100%;
+            height: 50px;
+            background: green;
+            z-index: 1;
+        }
+
+        #dirt {
+            position: relative;
+            top: 500px;
+            width: 100%;
+            height: 150px;
+            background: rgb(165, 116, 42);
+            z-index: 1;
+        }
+
+        #sun {
+            position: absolute;
+            top: 500px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: red;
+            animation: time 20s linear infinite;
+        }
+
+        #shadow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            animation: shadow 20s infinite;
+        }
+
+        @keyframes shadow {
+            0% {
+                opacity: 0;
             }
 
-            #wrap {
-                width: 1100px;
-                height: 1100px;
-                margin: 0 auto;
-                position: relative;
+            49% {
+                opacity: 0;
             }
 
-            #grass {
-                position: relative;
-                top: 500px;
-                width: 100%;
-                height: 50px;
-                background: green;
-                z-index: 1;
+            50% {
+                background: #4e4e4e;
+                opacity: 0.3;
             }
 
-            #dirt {
-                position: relative;
-                top: 500px;
-                width: 100%;
-                height: 150px;
-                background: rgb(165, 116, 42);
-                z-index: 1;
+            90% {
+                opacity: 0.6;
             }
 
-            #sun {
-                position: absolute;
-                top: 500px;
-                left: 0;
-                width: 100px;
-                height: 100px;
-                border-radius: 100%;
+            100% {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes time {
+            0% {
                 background: red;
-                animation: time 20s linear infinite;
+                top: 500px;
+                left: 0px;
             }
 
-            #shadow {
-                position: fixed;
+            5% {
+                top: 200px;
+                left: 100px;
+            }
+
+            10% {
+                top: 100px;
+                left: 200px;
+            }
+
+            15% {
+                top: 41.7px;
+                left: 300px;
+            }
+
+            20% {
+                top: 10.1px;
+                left: 400px;
+            }
+
+            25% {
                 top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 2;
-                animation: shadow 20s infinite;
+                left: 500px;
             }
 
-            @keyframes shadow {
-                0% {
-                    opacity: 0;
-                }
-                49% {
-                    opacity: 0;
-                }
-                50% {
-                    background: #4e4e4e;
-                    opacity: 0.1;
-                }
-                75% {
-                    opacity: 0.6;
-                }
-                100% {
-                    opacity: 0.3;
-                }
+            30% {
+                top: 10.1px;
+                left: 600px;
             }
 
-            @keyframes time {
-                0% {
-                    background: red;
-                    top: 500px;
-                    left: 0px;
-                }
-                5% {
-                    top: 200px;
-                    left: 100px;
-                }
-                10% {
-                    top: 100px;
-                    left: 200px;
-                }
-                15% {
-                    top: 41.7px;
-                    left: 300px;
-                }
-                20% {
-                    top: 10.1px;
-                    left: 400px;
-                }
-                25% {
-                    top: 0;
-                    left: 500px;
-                }
-                30% {
-                    top: 10.1px;
-                    left: 600px;
-                }
-                35% {
-                    top: 41.7px;
-                    left: 700px;
-                }
-                40% {
-                    top: 100px;
-                    left: 800px;
-                }
-                45% {
-                    top: 200px;
-                    left: 900px;
-                }
-                49% {
-                    background: red;
-                    top: 500px;
-                    left: 1000px;
-                }
-                51% {
-                    background: yellow;
-                    top: 500px;
-                    left: 0px;
-                }
-                55% {
-                    top: 200px;
-                    left: 100px;
-                }
-                60% {
-                    top: 100px;
-                    left: 200px;
-                }
-                65% {
-                    top: 41.7px;
-                    left: 300px;
-                }
-                70% {
-                    top: 10.1px;
-                    left: 400px;
-                }
-                75% {
-                    top: 0;
-                    left: 500px;
-                }
-                80% {
-                    top: 10.1px;
-                    left: 600px;
-                }
-                85% {
-                    top: 41.7px;
-                    left: 700px;
-                }
-                90% {
-                    top: 100px;
-                    left: 800px;
-                }
-                95% {
-                    top: 200px;
-                    left: 900px;
-                }
-                100% {
-                    background: yellow;
-                    top: 500px;
-                    left: 1000px;
-                }
+            35% {
+                top: 41.7px;
+                left: 700px;
             }
-        </style>
-    </head>
-    <body>
-        <div id="wrap">
-            <div id="grass"></div>
-            <div id="dirt"></div>
-            <div id="sun"></div>
-            <div id="moon"></div>
-            <div id="shadow"></div>
-        </div>
-    </body>
+
+            40% {
+                top: 100px;
+                left: 800px;
+            }
+
+            45% {
+                top: 200px;
+                left: 900px;
+            }
+
+            49% {
+                background: red;
+                top: 500px;
+                left: 1000px;
+            }
+
+            51% {
+                background: yellow;
+                top: 500px;
+                left: 0px;
+            }
+
+            55% {
+                top: 200px;
+                left: 100px;
+            }
+
+            60% {
+                top: 100px;
+                left: 200px;
+            }
+
+            65% {
+                top: 41.7px;
+                left: 300px;
+            }
+
+            70% {
+                top: 10.1px;
+                left: 400px;
+            }
+
+            75% {
+                top: 0;
+                left: 500px;
+            }
+
+            80% {
+                top: 10.1px;
+                left: 600px;
+            }
+
+            85% {
+                top: 41.7px;
+                left: 700px;
+            }
+
+            90% {
+                top: 100px;
+                left: 800px;
+            }
+
+            95% {
+                top: 200px;
+                left: 900px;
+            }
+
+            100% {
+                background: yellow;
+                top: 500px;
+                left: 1000px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="grass"></div>
+        <div id="dirt"></div>
+        <div id="sun"></div>
+        <div id="moon"></div>
+        <div id="shadow"></div>
+    </div>
+</body>
+
 </html>

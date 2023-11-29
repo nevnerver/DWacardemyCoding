@@ -1,0 +1,303 @@
+<!-- animation2.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #loading1 {
+            background: rgb(110, 101, 241);
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .loader {
+            width: 300px;
+            height: 50px;
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .loader::after {
+            content: "";
+            position: absolute;
+            background: rgb(73, 176, 245);
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            animation: loading1 4s ease-in-out infinite;
+        }
+
+        .loader:nth-child(2)::after {
+            animation-delay: 1s;
+        }
+
+        .loader:nth-child(3)::after {
+            animation-delay: 2s;
+        }
+
+        @keyframes loading1 {
+            0% {
+                left: -145px;
+                transform: rotate(0deg);
+            }
+
+            50% {
+                left: calc(100% - 30px);
+                transform: rotate(180deg);
+            }
+
+            100% {
+                left: -175px;
+                transform: rotate(360deg);
+            }
+        }
+
+        #loading2 {
+            width: 500px;
+            height: 500px;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .ring {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border: 5px solid white;
+            border-radius: 100%;
+        }
+
+        .ball_load {
+            position: absolute;
+            width: 50px;
+            height: 200px;
+            left: 75px;
+            top: 0;
+            animation: loading2 2s linear infinite;
+        }
+
+        .ball {
+            position: absolute;
+            left: 0;
+            top: -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background: rgb(219, 219, 30);
+        }
+
+        @keyframes loading2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #dice {
+            width: 800px;
+            height: 800px;
+            background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: dice 3s ease-in infinite;
+        }
+
+        .number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: 800;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.65;
+        }
+
+        .one {
+            background: rgb(17, 255, 17);
+            transform: translateZ(150px);
+        }
+
+        .six {
+            background: rgb(31, 202, 31);
+            transform: translateZ(-150px);
+        }
+
+        .two {
+            background: rgb(14, 187, 14);
+            transform: translateX(-150px) rotateY(90deg);
+        }
+
+        .five {
+            background: rgb(66, 226, 66);
+            transform: translateX(150px) rotateY(90deg);
+        }
+
+        .three {
+            background: rgb(44, 190, 44);
+            transform: translateY(-150px) rotateX(90deg);
+        }
+
+        .four {
+            background: rgb(44, 211, 44);
+            transform: translateY(150px) rotateX(90deg);
+        }
+
+        @keyframes dice {
+            100% {
+                transform: rotateY(360deg) rotateX(720deg) rotateZ(1080deg);
+            }
+        }
+
+
+
+
+        img {
+            height: 100%;
+        }
+
+        #imgBox {
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            border-radius: 40%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            animation: move 5s linear infinite alternate;
+        }
+
+        @keyframes move {
+            0% {
+                width: 30px;
+                height: 30px;
+                top: 0;
+            }
+
+            100% {
+                width: 1000px;
+                height: 1000px;
+                border-radius: 0;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+
+
+        /* #imgBox {
+            margin: 0 auto;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #imgBox img {
+            border-radius: 100%;
+            position: relative;
+            left: calc(50% - 15px);
+            top: 0;
+            width: 30px;
+            height: 30px;
+            animation: img 5s ease-out infinite alternate;
+            margin: 0 auto;
+        }
+
+        @keyframes img {
+            0% {
+
+                width: 30px;
+                height: 30px;
+            }
+
+            70% {
+                height: 600px;
+                border-radius: 100%;
+            }
+
+            100% {
+                border-radius: 0%;
+                top: calc(50% - 500px);
+                left: calc(50% - 500px);
+                width: 1000px;
+                height: 1000px;
+            }
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="imgBox">
+        <img src="./static/images/pngtree-blue-technology-news-background-picture-image_1472608.jpg" alt="이미지">
+    </div>
+
+    <!-- 
+
+        이미지 1장 필요
+        1. 처음에 이미지의 크기는 30px, 30px이고 타원형이다.
+        2. 애니메이션 동작은 이미지가 점점 커지면서 1000px, 1000px 크기가 된다.
+        3. 1000px의 크기가 되면 타원형에서 사각형으로 변환
+        4. 사각형의 모양에서 다시 타원형으로 변하면서 30px로 작아진다.
+        5. 처음 이미지의 위치는 브라우저의 중앙 상단에 위치
+        6. 1000px이 되면 브라우저 화면에서 중앙에 위치한다.
+        
+    -->
+
+
+    <!-- <div id="dice">
+        <div id="box">
+            <div class="number one">1</div>
+            <div class="number two">2</div>
+            <div class="number three">3</div>
+            <div class="number four">4</div>
+            <div class="number five">5</div>
+            <div class="number six">6</div>
+        </div>
+    </div>
+
+    <div id="loading1">
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+    </div>
+
+    <div id="loading2">
+        <div class="ring">
+            <div class="ball_load">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>
