@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container1 {
+            width: 800px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 100px;
+            gap: 20px;
+        }
+
+        .item:nth-child(1) {
+            grid-row: 1/5;
+        }
+
+        .item:nth-child(5) {
+            grid-row: 2/4;
+            grid-column: 3/5;
+        }
+
+        .item:nth-child(8) {
+            grid-row: 4/5;
+            grid-column: 2/5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container1">
+        <div class="item" style="background: rgb(226, 105, 105);">1</div>
+        <div class="item" style="background: rgb(250, 189, 75);">2</div>
+        <div class="item" style="background: rgb(243, 243, 100);">3</div>
+        <div class="item" style="background: rgb(105, 224, 105);">4</div>
+        <div class="item" style="background: rgb(91, 91, 219);">5</div>
+        <div class="item" style="background: rgb(180, 86, 247);">6</div>
+        <div class="item" style="background: rgb(228, 131, 228);">7</div>
+        <div class="item" style="background: rgb(122, 41, 122);">8</div>
+    </div>
+</body>
+
+</html>
