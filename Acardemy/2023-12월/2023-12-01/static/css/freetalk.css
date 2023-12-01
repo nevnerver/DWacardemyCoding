@@ -1,0 +1,35 @@
+#tableWrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#tableSearch {
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#tableSearchWord {
+    width: 95%;
+}
+
+#tableMain {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+#tableMenu {
+    width: 900px;
+    margin: 0 auto;
+}
+
+td {
+    height: 40px;
+    border: 1px solid black;
+}
+
+.tableNum,
+.tableWriter,
+.tableDate {
+    width: 150px;
+}

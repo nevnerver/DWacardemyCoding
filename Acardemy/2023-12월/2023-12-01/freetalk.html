@@ -1,82 +1,154 @@
 <!-- freetalk.html -->
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- 부트스트랩 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- 부트스트랩 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <link rel="icon" href="./static/images/NNNN-logo.ico" />
+        <link rel="stylesheet" href="./static/css/default.css" />
+        <link rel="stylesheet" href="./static/css/freetalk.css" />
+    </head>
 
-    <link rel="icon" href="./static/images/NNNN-logo.ico">
-    <link rel="stylesheet" href="./static/css/default.css">
-</head>
-
-<body>
-    <div id="wrap">
-        <div id="top">
-            <div class="topMenu">
-                <span><a href="./signin.html">로그인</a></span>
-                <span><a href="./signup.html">회원가입</a></span>
-                <span><a href="">문의</a></span>
-            </div>
-        </div>
-        <div id="header">
-            <div id="nav">
-                <div class="logo" onclick="javascript:location.href='./index.html';"></div>
-                <div class="menu">
-                    <ul class="menuList">
-                        <li class="menuItem">FreeDomLife
-                            <ul class="subMenu">
-                                <li class="subItem"><a href="./freetalk.html">나혼자산다</a></li>
-                                <li class="subItem">혼밥</li>
-                                <li class="subItem">혼술</li>
-                            </ul>
-                        </li>
-                        <li class="menuItem">Redemption
-                            <ul class="subMenu">
-                                <li class="subItem">연애와구속</li>
-                                <li class="subItem">회사와 억압</li>
-                            </ul>
-                        </li>
-                        <li class="menuItem">MyLife
-                            <ul class="subMenu">
-                                <li class="subItem">슬기로운사회생활</li>
-                                <li class="subItem">행복한연애생활</li>
-                                <li class="subItem">홀로서기</li>
-                            </ul>
-                        </li>
-                        <li class="menuItem">LifeDiary</li>
-                        <li class="menuItem">MovieIs
-                            <ul class="subMenu">
-                                <li class="subItem">액션/SF</li>
-                                <li class="subItem">공포/스릴러</li>
-                                <li class="subItem">코미디/드라마</li>
-                                <li class="subItem">혼자본영화</li>
-                            </ul>
-                        </li>
-                        <li class="menuItem">Customer</li>
-                    </ul>
+    <body>
+        <div id="wrap">
+            <div id="top">
+                <div class="topMenu">
+                    <span><a href="./signin.html">로그인</a></span>
+                    <span><a href="./signup.html">회원가입</a></span>
+                    <span><a href="">문의</a></span>
                 </div>
             </div>
+            <div id="header">
+                <div id="nav">
+                    <div class="logo" onclick="javascript:location.href='./index.html';"></div>
+                    <div class="menu">
+                        <ul class="menuList">
+                            <li class="menuItem">
+                                FreeDomLife
+                                <ul class="subMenu">
+                                    <li class="subItem"><a href="./freetalk.html">나혼자산다</a></li>
+                                    <li class="subItem">혼밥</li>
+                                    <li class="subItem">혼술</li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                Redemption
+                                <ul class="subMenu">
+                                    <li class="subItem">연애와구속</li>
+                                    <li class="subItem">회사와 억압</li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                MyLife
+                                <ul class="subMenu">
+                                    <li class="subItem">슬기로운사회생활</li>
+                                    <li class="subItem">행복한연애생활</li>
+                                    <li class="subItem">홀로서기</li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">LifeDiary</li>
+                            <li class="menuItem">
+                                MovieIs
+                                <ul class="subMenu">
+                                    <li class="subItem">액션/SF</li>
+                                    <li class="subItem">공포/스릴러</li>
+                                    <li class="subItem">코미디/드라마</li>
+                                    <li class="subItem">혼자본영화</li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">Customer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tableWrap">
+                <div id="tableSearch">
+                    <input type="text" name="tableSearchWord" id="tableSearchWord" />
+                    <label><i class="bi bi-search-heart"></i></label>
+                </div>
+                <div id="tableMain">
+                    <table id="tableMenu">
+                        <tr>
+                            <td class="tableNum">번호</td>
+                            <td class="tableName">제목</td>
+                            <td class="tableWriter">작성자</td>
+                            <td class="tableDate">작성일</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">1</td>
+                            <td class="tableName">최선의 무기는 함께 앉아 이야기를 나누는 것이다.</td>
+                            <td class="tableWriter">넬슨 만델라</td>
+                            <td class="tableDate">1918.07.18</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">2</td>
+                            <td class="tableName">"말"을 독점하면 "적"이 많아진다.</td>
+                            <td class="tableWriter">유재석</td>
+                            <td class="tableDate">1972.08.14</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">3</td>
+                            <td class="tableName">기술은 하나의 도구에 불과하다.</td>
+                            <td class="tableWriter">빌 게이츠</td>
+                            <td class="tableDate">1955.10.28</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">4</td>
+                            <td class="tableName">하기 쉬운 말보다 알아듣기 쉽게 얘기해라.</td>
+                            <td class="tableWriter">토마스 에디슨</td>
+                            <td class="tableDate">1847.02.11</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">5</td>
+                            <td class="tableName">열정이 없다면 성취도 없다.</td>
+                            <td class="tableWriter">마이클 조던</td>
+                            <td class="tableDate">1963.02.17</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">6</td>
+                            <td class="tableName">당신의 삶은 영원하지 않다.</td>
+                            <td class="tableWriter">스티브 잡스</td>
+                            <td class="tableDate">1955.02.24</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">7</td>
+                            <td class="tableName">돈은 유일한 해답은 아니지만 차이를 만들어 낸다.</td>
+                            <td class="tableWriter">버락 오바마</td>
+                            <td class="tableDate">1961.08.04</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">8</td>
+                            <td class="tableName">한 사람에게서만 느낄 수 있는 게 사랑이다.</td>
+                            <td class="tableWriter">찰리 채플린</td>
+                            <td class="tableDate">1889.04.16</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">9</td>
+                            <td class="tableName">죄는 미워하고, 죄수는 사랑하라.</td>
+                            <td class="tableWriter">마하트마 간디</td>
+                            <td class="tableDate">1869.10.02</td>
+                        </tr>
+                        <tr>
+                            <td class="tableNum">10</td>
+                            <td class="tableName">1퍼센트의 가능성, 그것이 나의 길이다.</td>
+                            <td class="tableWriter">나폴레옹</td>
+                            <td class="tableDate">1769.08.15</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="footer">
+                <h4>VIOLET Corp.</h4>
+            </div>
         </div>
-
-        <div>
-            <!-- 테이블 만들기
-                10줄 테이블 번호 , 제목 , 작성자 , 작성일 
-            -->
-        </div>
-
-        <div id="footer">
-            <h4>VIOLET Corp.</h4>
-        </div>
-
-    </div>
-</body>
-
+    </body>
 </html>

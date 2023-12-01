@@ -17,9 +17,7 @@
     --title-size: 2.5rem;
     --content-size: 1.5rem;
     --sub-size: 1.9rem;
-
 }
-
 
 * {
     margin: 0;
@@ -55,10 +53,10 @@ table {
     text-align: center;
 }
 
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=number] {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
     padding: 5px 10px;
     outline: none;
     border: 0;
@@ -67,19 +65,17 @@ input[type=number] {
 }
 
 button,
-input[type=button],
-input[type=submit] {
+input[type="button"],
+input[type="submit"] {
     border: 0;
     background-color: var(--bt-color);
     font-size: var(--sub-size);
     border-radius: 10px;
-
 }
 
 img {
     width: 100%;
 }
-
 
 #wrap {
     width: 100%;
@@ -111,7 +107,7 @@ img {
 #header {
     width: 100%;
     border-top: 2px solid rgb(152, 62, 212);
-    border-bottom: 2px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -155,7 +151,7 @@ img {
     padding: 20px 5px;
 }
 
-.menuList .menuItem .subMenu {
+/* .menuList .menuItem .subMenu {
     display: none;
     position: absolute;
     top: 80px;
@@ -166,7 +162,7 @@ img {
 
 .menuList .menuItem .subMenu .subItem {
     line-height: 30px;
-}
+} */
 
 /* 
 .menuList .menuItem .subMenu {
@@ -191,6 +187,27 @@ img {
     top: 40px;
     position: relative;
 } */
+
+.menuList .menuItem .subMenu {
+    position: absolute;
+    width: 130px;
+    font-size: 1rem;
+    opacity: 0;
+}
+.menuList .menuItem .subMenu .subItem {
+    position: absolute;
+    line-height: 0;
+    top: -10px;
+    background: rgba(184, 140, 238, 0.7);
+}
+.menuList .menuItem:hover .subMenu {
+    opacity: 1;
+}
+.menuList .menuItem:hover .subMenu .subItem {
+    line-height: 30px;
+    top: 33px;
+    position: relative;
+}
 
 #footer {
     width: 100%;
