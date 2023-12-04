@@ -1,35 +1,44 @@
-#tableWrap {
+#main {
     width: 1200px;
     margin: 0 auto;
 }
 
-#tableSearch {
+.boardSearch {
+    display: flex;
     width: 600px;
     margin: 0 auto;
     padding: 50px 0;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#tableSearchWord {
-    width: 95%;
+.boardSearch input {
+    width: 90%;
 }
 
-#tableMain {
-    width: 100%;
+.searchBt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boardBox {
+    width: 900px;
+    margin: 0 auto;
     padding-bottom: 50px;
 }
 
-#tableMenu {
-    width: 900px;
+.board {
+    width: 100%;
     margin: 0 auto;
 }
 
-td {
-    height: 40px;
-    border: 1px solid black;
+.board th:nth-child(1) {
+    width: 70px;
 }
 
-.tableNum,
-.tableWriter,
-.tableDate {
-    width: 150px;
+.board th,
+.board td {
+    height: 50px;
+    border: 1px solid black;
 }
