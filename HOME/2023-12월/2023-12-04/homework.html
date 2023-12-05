@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-        <script>
-            // 민수가 혈당을 체크하였다.
-            // 혈당 수치에 따라 구분하여 출력하시오
-            // 70~100 일 경우 공복혈당
-            // 90~140 일 경우 식후 2시간 혈당
-            // 정상혈당 수치는 70~100, 90~140이다.
-            // 정상수치보다 5.7%미만이면 당화혈색소라고 출력
-            // input 태그 값 가져오는 함수, 수치에 따라 결과 출력하는함수
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-            function bscalc() {
-                var b = Number($("#bebs").val());
-                var a = Number($("#afbs").val());
+    <script>
+        // 민수가 혈당을 체크하였다.
+        // 혈당 수치에 따라 구분하여 출력하시오
+        // 70~100 일 경우 공복혈당
+        // 90~140 일 경우 식후 2시간 혈당
+        // 정상혈당 수치는 70~100, 90~140이다.
+        // 정상수치보다 5.7%미만이면 당화혈색소라고 출력
+        // input 태그 값 가져오는 함수, 수치에 따라 결과 출력하는함수
 
-                var res = tot(b, a);
-                $("#bsres").html(res);
+        // function bscalc() {
+        //     var b = Number($("#bebs").val());
+        //     var a = Number($("#afbs").val());
+
+        //     tot(b, a);
+        // }
+
+        // function tot(a, b) {
+
+        //     var avg = (a + b) / 2;
+        //     var dl = "";
+        //     if (avg < 150) dl = "매우좋음";
+        //     else if (avg < 210) dl = "좋음";
+        //     else if (avg < 270) dl = "나쁨";
+        //     else dl = "매우나쁨";
+
+        //     $("#bsres").html(dl);
+
+        // }
+
+
+        function sugar() {
+
+            var v = getBlood();
+        }
+
+        function getBlood() {
+            var v = Number($("#bl").val());
+            return v;
+        }
+
+
+        // 종우가 비만도 측정을 하였다.
+        // 비만도 BMI지수 계산은 몸무게/((키/100)*(키/100))
+        // BMI 지수가 18.5 이하면 저체중
+        // 18.5~22.9 사이면 정상
+        // 23.0~24.9 사이면 과체중
+        // 25 이상은 비만
+
+        function bmicalc() {
+            var h = Number($("#bmih").val());
+            var w = Number($("#bmiw").val());
+
+            var res = w / ((h / 100) * (h / 100));
+
+            if (res <= 18.5) {
+                $("#bmires").html("저체중");
+            } else if (res < 23) {
+                $("#bmires").html("정상");
+            } else if (res < 25) {
+                $("#bmires").html("과체중");
+            } else {
+                $("#bmires").html("비만");
             }
+        }
+    </script>
+</head>
 
-            function tot(a, b) {
-                var avg = (a + b) / 2;
-                var dl = "";
-                if (avg < 150) dl = "매우좋음";
-                else if (avg < 210) dl = "좋음";
-                else if (avg < 270) dl = "나쁨";
-                else dl = "매우나쁨";
+<body>
+    <!-- 공복 혈당 수치<input type="text" id="bebs" /> <br />
+    식후 2시간 혈당수치<input type="text" id="afbs" /> <br />
+    <button onclick="bscalc()">혈당수치 계산</button>
+    <div id="bsres"></div>
 
-                return dl;
-            }
+    <br /><br />
+    키<input type="text" id="bmih" /><br />
+    몸무게<input type="text" id="bmiw" /><br />
+    <button onclick="bmicalc()">비만도 계산</button>
+    <div id="bmires"></div> -->
 
-            // 종우가 비만도 측정을 하였다.
-            // 비만도 BMI지수 계산은 몸무게/((키/100)*(키/100))
-            // BMI 지수가 18.5 이하면 저체중
-            // 18.5~22.9 사이면 정상
-            // 23.0~24.9 사이면 과체중
-            // 25 이상은 비만
 
-            function bmicalc() {
-                var h = Number($("#bmih").val());
-                var w = Number($("#bmiw").val());
+    <input type="text" id="bl">
+    <button onclick="sugar()">혈당수치</button>
+    <div id="bl"></div>
 
-                var res = w / ((h / 100) * (h / 100));
 
-                if (res <= 18.5) {
-                    $("#bmires").html("저체중");
-                } else if (res < 23) {
-                    $("#bmires").html("정상");
-                } else if (res < 25) {
-                    $("#bmires").html("과체중");
-                } else {
-                    $("#bmires").html("비만");
-                }
-            }
-        </script>
-    </head>
 
-    <body>
-        공복 혈당 수치<input type="text" id="bebs" /> <br />
-        식후 2시간 혈당수치<input type="text" id="afbs" /> <br />
-        <button onclick="bscalc()">혈당수치 계산</button>
-        <div id="bsres"></div>
 
-        <br /><br />
-        키<input type="text" id="bmih" /><br />
-        몸무게<input type="text" id="bmiw" /><br />
-        <button onclick="bmicalc()">비만도 계산</button>
-        <div id="bmires"></div>
-    </body>
+</body>
+
 </html>
